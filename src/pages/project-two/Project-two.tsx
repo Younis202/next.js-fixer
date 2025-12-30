@@ -1,26 +1,182 @@
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
+import React from 'react';
 
+// ============================================================
+// DATA CONFIGURATIONS
+// ============================================================
+
+const ARTICLE_TAGS = [
+    { label: 'Product' },
+    { label: 'UI UX Design' }
+];
+
+const SERVICE_TAGS = [
+    { label: 'Branding design' },
+    { label: 'Web Design' },
+    { label: 'UI/UX Design' }
+];
+
+const ABOUT_IMAGES = [
+    {
+        src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c6439fd896bfa234e8c08f_dd-summit-about-1-high.jpg',
+        alt: 'Dontdiesummit laptop mockup',
+        width: 635,
+        height: 644
+    },
+    {
+        src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c643b877a75d96451a45d9_dd-summit-about-2-high.jpg',
+        alt: 'Dontdiesummit mobile mockup',
+        width: 635,
+        height: 644
+    }
+];
+
+const SOLUTION_CARDS = [
+    {
+        number: '001',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57151ca21d031b662d6ea_calender.svg',
+        title: 'Initial Brief',
+        description: "Start by gathering an initial design brief to understand the client's aspirations"
+    },
+    {
+        number: '002',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57150a90a95057f29dba9_person.svg',
+        title: 'Questionnaire',
+        description: 'Ask insightful questions to clarify project requirements and gather valuable insights.'
+    },
+    {
+        number: '003',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57150b4de1911f9b773e8_estimate.svg',
+        title: 'Estimate',
+        description: "Provide a transparent project quote that outlines costs and timelines, ensuring with the client's budget."
+    },
+    {
+        number: '004',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c571504fcf89b38f96ae4c_kickoff.svg',
+        title: 'Project Kick-off',
+        description: 'Once the client approves the quote, initiate the project with a well-defined plan and open lines of communication.'
+    }
+];
+
+const RELATED_PROJECTS = [
+    {
+        href: '/projects/nashouse',
+        imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b847869e0d4e49c7a71e_next-project-low.webp',
+        imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b848efd444c01860932d_next-project-high.jpg',
+        title: 'Nashouse to redesign their  full website'
+    },
+    {
+        href: '/projects/nastravel',
+        imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b84767fad49cee6f2e3b_next-project-2-low.webp',
+        imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b8485b462b3a3a91ebd7_next-project-2-high.jpg',
+        title: 'Nastravels to redesign their  full website'
+    }
+];
+
+// ============================================================
+// REUSABLE COMPONENTS
+// ============================================================
+
+const ArticleTag = ({ label }) => (
+    <div className="article_tag display-flex is-left">
+        <div className="article_tag-dot" />
+        <div>{label}</div>
+    </div>
+);
+
+const ServiceTag = ({ label }) => (
+    <div className="service-tag display-flex is-center">
+        <div className="body-l">{label}</div>
+    </div>
+);
+
+const AboutImage = ({ src, alt, width, height }) => (
+    <figure className="about-project_figure position-relative overflow-hidden">
+        <img
+            className="cover-image"
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+        />
+    </figure>
+);
+
+const SolutionCard = ({ number, icon, title, description }) => (
+    <div className="solution_card display-vertical">
+        <div className="solution_card_top display-flex">
+            <div className="solution_card_icon display-flex is-center">
+                <img src={icon} loading="lazy" alt="" />
+            </div>
+            <div className="body-l">{number}</div>
+        </div>
+        <div className="solution_card_content display-vertical">
+            <h3 className="text-color-alternate">{title}</h3>
+            <p className="text-size-regular">{description}</p>
+        </div>
+    </div>
+);
+
+const RelatedProjectItem = ({ href, imageLow, imageHigh, title }) => (
+    <div className="project_single-item">
+        <a
+            href={href}
+            className="project_figure position-relative overflow-hidden w-inline-block is-related"
+        >
+            <img
+                className="cover-image"
+                src={imageLow}
+                data-lazy-src={imageHigh}
+                alt="omoskillo website mockup"
+                width={614}
+                height={576}
+                loading="lazy"
+                fetchpriority="low"
+                decoding="async"
+            />
+        </a>
+        <div className="project_content">
+            <h3 className="heading-style-h2">
+                <div className="display-inline">Omotive helped </div>
+                <div className="display-inline text-style-secondary-font">{title}</div>
+            </h3>
+            <div
+                className="is-magnatic"
+                style={{
+                    willChange: "transform",
+                    transform: "translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+                    transformStyle: "preserve-3d"
+                }}
+            >
+                <a href={href} className="button w-inline-block is-secondary">
+                    <div>View case study</div>
+                    <div className="button-hover-bg-two" />
+                </a>
+            </div>
+        </div>
+    </div>
+);
+
+// ============================================================
+// MAIN COMPONENT
+// ============================================================
 
 const ProjectTwo = () => {
-    // Initialize Webflow scripts and animations
-    useWebflowScripts();
     return (
         <div className="page-wrapper">
             <main className="main-wrapper">
+                {/* Project Details Header */}
                 <section className="section_project-details-header">
                     <div className="padding-global">
                         <div className="container-large">
                             <div className="project-details-header_content display-flex">
                                 <div className="project-details_content_left display-vertical">
                                     <div className="article_tag-wrapper display-flex">
-                                        <div className="article_tag display-flex is-left">
-                                            <div className="article_tag-dot" />
-                                            <div>Product</div>
-                                        </div>
-                                        <div className="article_tag display-flex is-left">
-                                            <div className="article_tag-dot" />
-                                            <div>UI UX Design</div>
-                                        </div>
+                                        {ARTICLE_TAGS.map((tag, index) => (
+                                            <ArticleTag key={index} {...tag} />
+                                        ))}
                                     </div>
                                     <h1 className="project-details_title is-two">
                                         Omotive helped{" "}
@@ -39,15 +195,9 @@ const ProjectTwo = () => {
                                         Our <span className="text-style-secondary-font">service</span>
                                     </div>
                                     <div className="service-tag_wrapper display-flex is-left">
-                                        <div className="service-tag display-flex is-center">
-                                            <div className="body-l">Branding design</div>
-                                        </div>
-                                        <div className="service-tag display-flex is-center">
-                                            <div className="body-l">Web Design</div>
-                                        </div>
-                                        <div className="service-tag display-flex is-center">
-                                            <div className="body-l">UI/UX Design</div>
-                                        </div>
+                                        {SERVICE_TAGS.map((tag, index) => (
+                                            <ServiceTag key={index} {...tag} />
+                                        ))}
                                     </div>
                                 </div>
                             </div>
@@ -66,6 +216,8 @@ const ProjectTwo = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* About Project Section */}
                 <section className="section_about-project">
                     <div className="padding-global padding-section">
                         <div className="container-large">
@@ -82,34 +234,15 @@ const ProjectTwo = () => {
                                 </p>
                             </div>
                             <div className="about-project_grid">
-                                <figure className="about-project_figure position-relative overflow-hidden">
-                                    <img
-                                        className="cover-image"
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c6439fd896bfa234e8c08f_dd-summit-about-1-high.jpg"
-                                        alt="Dontdiesummit laptop mockup"
-                                        width={635}
-                                        height={644}
-                                        loading="lazy"
-                                        fetchpriority="low"
-                                        decoding="async"
-                                    />
-                                </figure>
-                                <figure className="about-project_figure position-relative overflow-hidden">
-                                    <img
-                                        className="cover-image"
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c643b877a75d96451a45d9_dd-summit-about-2-high.jpg"
-                                        alt="Dontdiesummit mobile mockup"
-                                        width={635}
-                                        height={644}
-                                        loading="lazy"
-                                        fetchpriority="low"
-                                        decoding="async"
-                                    />
-                                </figure>
+                                {ABOUT_IMAGES.map((image, index) => (
+                                    <AboutImage key={index} {...image} />
+                                ))}
                             </div>
                         </div>
                     </div>
                 </section>
+
+                {/* Solution Section */}
                 <section className="section_solution position-relative">
                     <div className="padding-global">
                         <div className="container-large">
@@ -121,7 +254,7 @@ const ProjectTwo = () => {
                                     <p className="project_section_text body-l">
                                         Designing the Don't Die Summit website means creating a space
                                         that inspires action and hope, reflecting the mission to embrace
-                                        life’s possibilities and the freedom to live on our own
+                                        life's possibilities and the freedom to live on our own
                                         terms—all in a simple, engaging experience
                                     </p>
                                 </div>
@@ -131,8 +264,8 @@ const ProjectTwo = () => {
                                     </h2>
                                     <p className="project_section_text body-l">
                                         The solution is to design Dontdie summit website that feels as
-                                        vibrant and inspiring as Nas Daily’s stories. With easy
-                                        navigation, beautiful visuals, and a smooth experience, we’ll
+                                        vibrant and inspiring as Nas Daily's stories. With easy
+                                        navigation, beautiful visuals, and a smooth experience, we'll
                                         bring their mission to life and make it simple for users to
                                         connect with the world through their lens
                                     </p>
@@ -144,82 +277,9 @@ const ProjectTwo = () => {
                                 </h2>
                             </div>
                             <div className="solution_grid">
-                                <div className="solution_card display-vertical">
-                                    <div className="solution_card_top display-flex">
-                                        <div className="solution_card_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57151ca21d031b662d6ea_calender.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">001</div>
-                                    </div>
-                                    <div className="solution_card_content display-vertical">
-                                        <h3 className="text-color-alternate">Initial Brief</h3>
-                                        <p className="text-size-regular">
-                                            Start by gathering an initial design brief to understand the
-                                            client's aspirations
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="solution_card display-vertical">
-                                    <div className="solution_card_top display-flex">
-                                        <div className="solution_card_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57150a90a95057f29dba9_person.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">002</div>
-                                    </div>
-                                    <div className="solution_card_content display-vertical">
-                                        <h3 className="text-color-alternate">Questionnaire</h3>
-                                        <p className="text-size-regular">
-                                            Ask insightful questions to clarify project requirements and
-                                            gather valuable insights.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="solution_card display-vertical">
-                                    <div className="solution_card_top display-flex">
-                                        <div className="solution_card_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57150b4de1911f9b773e8_estimate.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">003</div>
-                                    </div>
-                                    <div className="solution_card_content display-vertical">
-                                        <h3 className="text-color-alternate">Estimate</h3>
-                                        <p className="text-size-regular">
-                                            Provide a transparent project quote that outlines costs and
-                                            timelines, ensuring with the client's budget.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="solution_card display-vertical">
-                                    <div className="solution_card_top display-flex">
-                                        <div className="solution_card_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c571504fcf89b38f96ae4c_kickoff.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">004</div>
-                                    </div>
-                                    <div className="solution_card_content display-vertical">
-                                        <h3 className="text-color-alternate">Project Kick-off</h3>
-                                        <p className="text-size-regular">
-                                            Once the client approves the quote, initiate the project with
-                                            a well-defined plan and open lines of communication.
-                                        </p>
-                                    </div>
-                                </div>
+                                {SOLUTION_CARDS.map((card, index) => (
+                                    <SolutionCard key={index} {...card} />
+                                ))}
                             </div>
                         </div>
                     </div>
@@ -241,6 +301,8 @@ const ProjectTwo = () => {
                         />
                     </picture>
                 </section>
+
+                {/* Style Guide Section */}
                 <section className="section_style-guide">
                     <div className="padding-global padding-section">
                         <div className="container-large">
@@ -272,6 +334,8 @@ const ProjectTwo = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Home Screen Section */}
                 <section className="section_home-screen">
                     <div className="padding-global">
                         <div className="container-large">
@@ -296,6 +360,8 @@ const ProjectTwo = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Other Screen Section */}
                 <section className="section_other-screen">
                     <div className="padding-global padding-section">
                         <div className="container-large">
@@ -326,6 +392,8 @@ const ProjectTwo = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Testimonial Slider Section */}
                 <div className="section_testimonial-slider">
                     <div className="padding-global padding-section is-top-0">
                         <div className="container-large">
@@ -412,6 +480,8 @@ const ProjectTwo = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Related Projects Section */}
                 <section className="section_related-project">
                     <div className="padding-global padding-section is-top-0">
                         <div className="container-large">
@@ -421,92 +491,9 @@ const ProjectTwo = () => {
                                 </h2>
                             </div>
                             <div className="related-project_grid">
-                                <div className="project_single-item">
-                                    <a
-                                        href="/projects/nashouse"
-                                        className="project_figure position-relative overflow-hidden w-inline-block is-related"
-                                    >
-                                        <img
-                                            className="cover-image"
-                                            src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b847869e0d4e49c7a71e_next-project-low.webp"
-                                            data-lazy-src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b848efd444c01860932d_next-project-high.jpg"
-                                            alt="omoskillo website mockup"
-                                            width={614}
-                                            height={576}
-                                            loading="lazy"
-                                            fetchpriority="low"
-                                            decoding="async"
-                                        />
-                                    </a>
-                                    <div className="project_content">
-                                        <h3 className="heading-style-h2">
-                                            <div className="display-inline">Omotive helped </div>
-                                            <div className="display-inline text-style-secondary-font">
-                                                Nashouse to redesign their&nbsp;&nbsp;full website
-                                            </div>
-                                        </h3>
-                                        <div
-                                            className="is-magnatic"
-                                            style={{
-                                                willChange: "transform",
-                                                transform:
-                                                    "translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                transformStyle: "preserve-3d"
-                                            }}
-                                        >
-                                            <a
-                                                href="/projects/nashouse"
-                                                className="button w-inline-block is-secondary"
-                                            >
-                                                <div>View case study</div>
-                                                <div className="button-hover-bg-two" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="project_single-item">
-                                    <a
-                                        href="/projects/nastravel"
-                                        className="project_figure position-relative overflow-hidden w-inline-block is-related"
-                                    >
-                                        <img
-                                            className="cover-image"
-                                            src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b84767fad49cee6f2e3b_next-project-2-low.webp"
-                                            data-lazy-src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b8485b462b3a3a91ebd7_next-project-2-high.jpg"
-                                            alt="omoskillo website mockup"
-                                            width={614}
-                                            height={576}
-                                            loading="lazy"
-                                            fetchpriority="low"
-                                            decoding="async"
-                                        />
-                                    </a>
-                                    <div className="project_content">
-                                        <h3 className="heading-style-h2">
-                                            <div className="display-inline">Omotive helped </div>
-                                            <div className="display-inline text-style-secondary-font">
-                                                Nastravels to redesign their&nbsp;&nbsp;full website
-                                            </div>
-                                        </h3>
-                                        <div
-                                            className="is-magnatic"
-                                            style={{
-                                                willChange: "transform",
-                                                transform:
-                                                    "translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                transformStyle: "preserve-3d"
-                                            }}
-                                        >
-                                            <a
-                                                href="/projects/nastravel"
-                                                className="button w-inline-block is-secondary"
-                                            >
-                                                <div>View case study</div>
-                                                <div className="button-hover-bg-two" />
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                                {RELATED_PROJECTS.map((project, index) => (
+                                    <RelatedProjectItem key={index} {...project} />
+                                ))}
                             </div>
                         </div>
                     </div>

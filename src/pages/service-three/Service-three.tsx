@@ -1,11 +1,258 @@
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
+import React from 'react';
+
+// ============================================================
+// DATA CONFIGURATIONS
+// ============================================================
+
+const WORK_PROCESS_FEATURES = [
+    'Boost User Engagement and Drive Results',
+    'Full Ownership',
+    'Ultra-Fast Expedited Service Available'
+];
+
+const DESIGN_PROCESS_STEPS = [
+    {
+        number: '001',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bff7f640912009094a64fd_heart-icon.svg',
+        title: "Let's Meet",
+        description: "We want to dig deep, and find out what makes you tick. Your values, expertise and company history are behind everything we do, so let us"
+    },
+    {
+        number: '002',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa4bec44a21c544a32d6_tictactoi.svg',
+        title: 'Moodboard Dreaming',
+        description: "We're a collaborative and open-minded team that creates exceptional designs by embracing every voice and idea"
+    },
+    {
+        number: '003',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa82bb83378bdacd6b5e_desktop-settings.svg',
+        title: 'Figma UI Design',
+        description: 'Now things start to come together. We start bringing your plan and vision to life and create the website UI in Figma, building the foundations'
+    },
+    {
+        number: '004',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffaa5b7cb67f2e43f6136_code.svg',
+        title: 'Webflow Development',
+        description: "Bob the Builder's got nothing on us. Our website development geniuses get to work recreating the site UI in WordPress, Shopify, HubSpot"
+    },
+    {
+        number: '005',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffb1e3e5f1a358c9f068c_quality.svg',
+        title: 'Quality Assurance',
+        description: "Checkboards ready—we rigorously test every website element to ensure it's bug-free and ready for launch. Smooth sailing ahead!"
+    },
+    {
+        number: '006',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffba93278e50f2580a7d5_grid.svg',
+        title: 'We Have Liftoff!',
+        description: '3...2...1... Liftoff! Your rocket ship is ready to go. We are live to launch and watch the crowds burst with excitement.'
+    }
+];
+
+const CORE_VALUES = [
+    {
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02cacd9ea0f26bb5ae4da_blueprinnt-icon.svg',
+        title: 'Blueprint',
+        text: "We dive deep into your brand, conducting research and analysis to develop tailored blueprints that set you up for increased recognition within today's market."
+    },
+    {
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6fe961651407268d79fd8_foundation-icon.svg',
+        title: 'Foundation',
+        text: 'Our team brings your brand to life through intuitive websites and engaging mobile apps, innovation to captivate and keep loyal audiences.'
+    },
+    {
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6feaff171efceff6d1921_expansion-icon.svg',
+        title: 'Expansion',
+        text: 'We inspire deeper connection and help you realize lasting measurable results through cross-channel the right message at the right time.'
+    }
+];
+
+const EXCELLENCE_ITEMS = [
+    {
+        number: '001',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c01087aa70a95dc2666593_revision-icon.svg',
+        title: 'Identify  Your Business Challenges',
+        text: "We offer unlimited revisions as standard. So rest assured that be happy with all deliverables!"
+    },
+    {
+        number: '002',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c0200dc5b1446fccbaf4dc_hidden-fees-icon.svg',
+        title: 'No Hidden Fees',
+        text: 'Transparent web design services with no hidden fees, delivering clear, upfront pricing for your business'
+    },
+    {
+        number: '003',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02042f98a35e36081b3ca_process-icon.svg',
+        title: 'A Personal Process',
+        text: 'We focus on personalized processes that make your journey smooth, friendly, and enjoyable from start to finish'
+    },
+    {
+        number: '004',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c020b2859565df01fbcb78_sheet-icon.svg',
+        title: 'Efficient Project Management',
+        text: 'With our efficient project management, we ensure a smooth, friendly experienc, delivering results on time and with care'
+    },
+    {
+        number: '005',
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c020ebc1250a94c3f2016c_track-icon.svg',
+        title: 'Proven Track Record',
+        text: "With our proven track record, we've built lasting relationships and deliver results you can count on"
+    }
+];
+
+const CTA_LIST_ITEMS = [
+    'User-Centric & Scalable Designs',
+    'Optimized for Speed & Functionality',
+    'Unlimited Revisions & Clear, Transparent Contracts',
+    'Seamless Cross-Device Experience'
+];
+
+const OTHER_SERVICES = [
+    {
+        href: '/sevices/mobile-application-design',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg',
+        title: 'Mobile application design',
+        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+    },
+    {
+        href: '/sevices/website-design-branding',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c000326d559e692450982b_other-service-2-high.jpg',
+        title: 'Website design and branding',
+        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+    },
+    {
+        href: '/sevices/webflow-development',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg',
+        title: 'Webflow Developement',
+        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+    }
+];
+
+// ============================================================
+// REUSABLE COMPONENTS
+// ============================================================
+
+const DesignProcessItem = ({ number, icon, title, description }) => (
+    <div className="design-process_item">
+        <div className="design-process_icon-wrapper display-flex">
+            <div className="design-process_icon display-flex is-center">
+                <img src={icon} loading="lazy" alt="" />
+            </div>
+            <div className="body-l">{number}</div>
+        </div>
+        <div className="design-process_content display-vertical">
+            <h3>{title}</h3>
+            <p>{description}</p>
+        </div>
+    </div>
+);
+
+const CoreValueCard = ({ icon, title, text }) => (
+    <div className="core-value_card is-center">
+        <div className="margin-bottom margin-custom1">
+            <img src={icon} loading="lazy" alt="" />
+        </div>
+        <div className="margin-bottom margin-custom2">
+            <h3 className="core-value_card_title">{title}</h3>
+        </div>
+        <p className="core-value_card_text">{text}</p>
+    </div>
+);
+
+const ExcellenceItem = ({ number, icon, title, text }) => (
+    <div className="excellence_item">
+        <div className="excellence_content display-vertical">
+            <div>//{number}</div>
+            <h3 className="heading-style-h3">{title}</h3>
+        </div>
+        <div className="excellence_icon display-flex is-center">
+            <img src={icon} loading="lazy" alt="" />
+            <div gradient={1} className="gradient_icon-gradient pointer-events-none" />
+        </div>
+        <p className="excellence_item_text body-l">{text}</p>
+        <div className="process-item-border position-absolute" />
+    </div>
+);
+
+const OtherServiceCard = ({ href, image, title, description }) => (
+    <div className="other-service_card display-vertical">
+        <a href={href} className="other-service_figure position-relative overflow-hidden w-inline-block">
+            <img
+                className="cover-image"
+                src={image}
+                alt="Mobile application service"
+                width={414}
+                height={259}
+                loading="lazy"
+                fetchpriority="low"
+                decoding="async"
+            />
+        </a>
+        <div className="other-service_content">
+            <div className="margin-bottom margin-small">
+                <h3>{title}</h3>
+            </div>
+            <p>{description}</p>
+        </div>
+        <div className="display-flex">
+            <a
+                data-w-id="bdbc966e-3c4b-ff76-f07f-0dcb8ba5abe8"
+                href={href}
+                className="button is-secondary w-inline-block is-secondary"
+            >
+                <div>View service details</div>
+                <svg xmlns="http://www.w3.org/2000/svg" width={14} height={14} viewBox="0 0 14 14" fill="none">
+                    <g opacity="0.9">
+                        <path
+                            d="M4.8125 2.625L9.1875 7L4.8125 11.375"
+                            stroke="currentColor"
+                            strokeWidth="1.4"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                        />
+                    </g>
+                </svg>
+                <div className="button-hover-bg-two" />
+            </a>
+        </div>
+    </div>
+);
+
+const MagnaticButton = ({ href, text }) => (
+    <div
+        className="is-magnatic"
+        style={{
+            willChange: "transform",
+            transform: "translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+            transformStyle: "preserve-3d"
+        }}
+    >
+        <a
+            data-w-id="8bb02b6a-0dfa-c39d-4ebf-2f7056810763"
+            href={href}
+            className="button is-small w-inline-block"
+        >
+            <div className="button-text">{text}</div>
+            <div
+                className="button-hover-bg"
+                style={{
+                    transform: "translate3d(0px, 130%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
+                    transformStyle: "preserve-3d"
+                }}
+            />
+        </a>
+    </div>
+);
+
+// ============================================================
+// MAIN COMPONENT
+// ============================================================
 
 const ServiceThree = () => {
-    // Initialize Webflow scripts and animations
-    useWebflowScripts();
     return (
         <div className="page-wrapper">
             <main className="main-wrapper">
+                {/* Header Section */}
                 <header className="section_other-header">
                     <div className="padding-global padding-xxlarge">
                         <div className="container-large">
@@ -45,6 +292,8 @@ const ServiceThree = () => {
                         </div>
                     </div>
                 </header>
+
+                {/* Work Process Section */}
                 <section className="section_work-process">
                     <div className="padding-global padding-section">
                         <div className="container-large">
@@ -68,43 +317,15 @@ const ServiceThree = () => {
                                             and hassle-free
                                         </p>
                                         <ul role="list" className="work-process_list display-vertical">
-                                            <li className="work-process_list_item text-weight-medium">
-                                                Boost User Engagement and Drive Results
-                                            </li>
-                                            <li className="work-process_list_item text-weight-medium">
-                                                Full Ownership
-                                            </li>
-                                            <li className="work-process_list_item text-weight-medium">
-                                                Ultra-Fast Expedited Service Available
-                                            </li>
+                                            {WORK_PROCESS_FEATURES.map((feature, index) => (
+                                                <li key={index} className="work-process_list_item text-weight-medium">
+                                                    {feature}
+                                                </li>
+                                            ))}
                                         </ul>
                                     </div>
                                     <div className="display-flex margin-top margin-custom3">
-                                        <div
-                                            className="is-magnatic"
-                                            style={{
-                                                willChange: "transform",
-                                                transform:
-                                                    "translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                transformStyle: "preserve-3d"
-                                            }}
-                                        >
-                                            <a
-                                                data-w-id="8bb02b6a-0dfa-c39d-4ebf-2f7056810763"
-                                                href="/contact"
-                                                className="button is-small w-inline-block"
-                                            >
-                                                <div className="button-text">Get a quote</div>
-                                                <div
-                                                    className="button-hover-bg"
-                                                    style={{
-                                                        transform:
-                                                            "translate3d(0px, 130%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                        transformStyle: "preserve-3d"
-                                                    }}
-                                                ></div>
-                                            </a>
-                                        </div>
+                                        <MagnaticButton href="/contact" text="Get a quote" />
                                     </div>
                                 </div>
                                 <figure
@@ -126,6 +347,8 @@ const ServiceThree = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Design Process Section */}
                 <div className="section_design-process">
                     <div className="padding-global">
                         <div className="container-large">
@@ -136,193 +359,34 @@ const ServiceThree = () => {
                                 </h2>
                             </div>
                             <div className="design-process_grid">
-                                <div className="design-process_item">
-                                    <div className="design-process_icon-wrapper display-flex">
-                                        <div className="design-process_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bff7f640912009094a64fd_heart-icon.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">001</div>
-                                    </div>
-                                    <div className="design-process_content display-vertical">
-                                        <h3>Let's Meet</h3>
-                                        <p>
-                                            We want to dig deep, and find out what makes you tick. Your
-                                            values, expertise and company history are behind everything we
-                                            do, so let us
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="design-process_item">
-                                    <div className="design-process_icon-wrapper display-flex">
-                                        <div className="design-process_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa4bec44a21c544a32d6_tictactoi.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">002</div>
-                                    </div>
-                                    <div className="design-process_content display-vertical">
-                                        <h3>Moodboard Dreaming</h3>
-                                        <p>
-                                            We’re a collaborative and open-minded team that creates
-                                            exceptional designs by embracing every voice and idea
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="design-process_item">
-                                    <div className="design-process_icon-wrapper display-flex">
-                                        <div className="design-process_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa82bb83378bdacd6b5e_desktop-settings.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">003</div>
-                                    </div>
-                                    <div className="design-process_content display-vertical">
-                                        <h3>Figma UI Design</h3>
-                                        <p>
-                                            Now things start to come together. We start bringing your plan
-                                            and vision to life and create the website UI in Figma,
-                                            building the foundations
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="design-process_item">
-                                    <div className="design-process_icon-wrapper display-flex">
-                                        <div className="design-process_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffaa5b7cb67f2e43f6136_code.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">004</div>
-                                    </div>
-                                    <div className="design-process_content display-vertical">
-                                        <h3>Webflow Development</h3>
-                                        <p>
-                                            Bob the Builder's got nothing on us. Our website development
-                                            geniuses get to work recreating the site UI in WordPress,
-                                            Shopify, HubSpot
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="design-process_item">
-                                    <div className="design-process_icon-wrapper display-flex">
-                                        <div className="design-process_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffb1e3e5f1a358c9f068c_quality.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">005</div>
-                                    </div>
-                                    <div className="design-process_content display-vertical">
-                                        <h3>Quality Assurance</h3>
-                                        <p>
-                                            Checkboards ready—we rigorously test every website element to
-                                            ensure it’s bug-free and ready for launch. Smooth sailing
-                                            ahead!
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="design-process_item">
-                                    <div className="design-process_icon-wrapper display-flex">
-                                        <div className="design-process_icon display-flex is-center">
-                                            <img
-                                                src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffba93278e50f2580a7d5_grid.svg"
-                                                loading="lazy"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div className="body-l">006</div>
-                                    </div>
-                                    <div className="design-process_content display-vertical">
-                                        <h3>We Have Liftoff!</h3>
-                                        <p>
-                                            3...2...1... Liftoff! Your rocket ship is ready to go. We are
-                                            live to launch and watch the crowds burst with excitement.
-                                        </p>
-                                    </div>
-                                </div>
+                                {DESIGN_PROCESS_STEPS.map((step, index) => (
+                                    <DesignProcessItem key={index} {...step} />
+                                ))}
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* Core Values Section */}
                 <section className="section_core-values">
                     <div className="padding-global padding-section">
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    How we’re{" "}
+                                    How we're{" "}
                                     <span className="text-style-secondary-font">unique</span>
                                 </h2>
                             </div>
                             <div className="core-value_gird">
-                                <div className="core-value_card is-center">
-                                    <div className="margin-bottom margin-custom1">
-                                        <img
-                                            src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02cacd9ea0f26bb5ae4da_blueprinnt-icon.svg"
-                                            loading="lazy"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div className="margin-bottom margin-custom2">
-                                        <h3 className="core-value_card_title">Blueprint</h3>
-                                    </div>
-                                    <p className="core-value_card_text">
-                                        We dive deep into your brand, conducting research and analysis
-                                        to develop tailored blueprints that set you up for increased
-                                        recognition within today’s market.
-                                    </p>
-                                </div>
-                                <div className="core-value_card is-center">
-                                    <div className="margin-bottom margin-custom1">
-                                        <img
-                                            src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6fe961651407268d79fd8_foundation-icon.svg"
-                                            loading="lazy"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div className="margin-bottom margin-custom2">
-                                        <h3 className="core-value_card_title">Foundation</h3>
-                                    </div>
-                                    <p className="core-value_card_text">
-                                        Our team brings your brand to life through intuitive websites
-                                        and engaging mobile apps, innovation to captivate and keep loyal
-                                        audiences.
-                                    </p>
-                                </div>
-                                <div className="core-value_card is-center">
-                                    <div className="margin-bottom margin-custom1">
-                                        <img
-                                            src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6feaff171efceff6d1921_expansion-icon.svg"
-                                            loading="lazy"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div className="margin-bottom margin-custom2">
-                                        <h3 className="core-value_card_title">Expansion</h3>
-                                    </div>
-                                    <p className="core-value_card_text">
-                                        We inspire deeper connection and help you realize lasting
-                                        measurable results through cross-channel the right message at
-                                        the right time.
-                                    </p>
-                                </div>
+                                {CORE_VALUES.map((value, index) => (
+                                    <CoreValueCard key={index} {...value} />
+                                ))}
                             </div>
                         </div>
                     </div>
                 </section>
+
+                {/* Excellence Section */}
                 <div className="section_excellence position-relative">
                     <div className="padding-global">
                         <div className="container-large">
@@ -332,118 +396,9 @@ const ServiceThree = () => {
                                     <span className="text-style-secondary-font">Stand Out</span>
                                 </h2>
                             </div>
-                            <div className="excellence_item">
-                                <div className="excellence_content display-vertical">
-                                    <div>//001</div>
-                                    <h3 className="heading-style-h3">
-                                        Identify&nbsp;&nbsp;Your Business Challenges
-                                    </h3>
-                                </div>
-                                <div className="excellence_icon display-flex is-center">
-                                    <img
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c01087aa70a95dc2666593_revision-icon.svg"
-                                        loading="lazy"
-                                        alt=""
-                                    />
-                                    <div
-                                        gradient={1}
-                                        className="gradient_icon-gradient pointer-events-none"
-                                    />
-                                </div>
-                                <p className="excellence_item_text body-l">
-                                    We offer unlimited revisions as standard. So rest assured that be
-                                    happy with all deliverables!
-                                </p>
-                                <div className="process-item-border position-absolute" />
-                            </div>
-                            <div className="excellence_item">
-                                <div className="excellence_content display-vertical">
-                                    <div>//002</div>
-                                    <h3 className="heading-style-h3">No Hidden Fees</h3>
-                                </div>
-                                <div className="excellence_icon display-flex is-center">
-                                    <img
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c0200dc5b1446fccbaf4dc_hidden-fees-icon.svg"
-                                        loading="lazy"
-                                        alt=""
-                                    />
-                                    <div
-                                        gradient={1}
-                                        className="gradient_icon-gradient pointer-events-none"
-                                    />
-                                </div>
-                                <p className="excellence_item_text body-l">
-                                    Transparent web design services with no hidden fees, delivering
-                                    clear, upfront pricing for your business
-                                </p>
-                                <div className="process-item-border position-absolute" />
-                            </div>
-                            <div className="excellence_item">
-                                <div className="excellence_content display-vertical">
-                                    <div>//003</div>
-                                    <h3 className="heading-style-h3">A Personal Process</h3>
-                                </div>
-                                <div className="excellence_icon display-flex is-center">
-                                    <img
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02042f98a35e36081b3ca_process-icon.svg"
-                                        loading="lazy"
-                                        alt=""
-                                    />
-                                    <div
-                                        gradient={1}
-                                        className="gradient_icon-gradient pointer-events-none"
-                                    />
-                                </div>
-                                <p className="excellence_item_text body-l">
-                                    We focus on personalized processes that make your journey smooth,
-                                    friendly, and enjoyable from start to finish
-                                </p>
-                                <div className="process-item-border position-absolute" />
-                            </div>
-                            <div className="excellence_item">
-                                <div className="excellence_content display-vertical">
-                                    <div>//004</div>
-                                    <h3 className="heading-style-h3">Efficient Project Management</h3>
-                                </div>
-                                <div className="excellence_icon display-flex is-center">
-                                    <img
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c020b2859565df01fbcb78_sheet-icon.svg"
-                                        loading="lazy"
-                                        alt=""
-                                    />
-                                    <div
-                                        gradient={1}
-                                        className="gradient_icon-gradient pointer-events-none"
-                                    />
-                                </div>
-                                <p className="excellence_item_text body-l">
-                                    With our efficient project management, we ensure a smooth,
-                                    friendly experienc, delivering results on time and with care
-                                </p>
-                                <div className="process-item-border position-absolute" />
-                            </div>
-                            <div className="excellence_item">
-                                <div className="excellence_content display-vertical">
-                                    <div>//005</div>
-                                    <h3 className="heading-style-h3">Proven Track Record</h3>
-                                </div>
-                                <div className="excellence_icon display-flex is-center">
-                                    <img
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c020ebc1250a94c3f2016c_track-icon.svg"
-                                        loading="lazy"
-                                        alt=""
-                                    />
-                                    <div
-                                        gradient={1}
-                                        className="gradient_icon-gradient pointer-events-none"
-                                    />
-                                </div>
-                                <p className="excellence_item_text body-l">
-                                    With our proven track record, we’ve built lasting relationships
-                                    and deliver results you can count on
-                                </p>
-                                <div className="process-item-border position-absolute" />
-                            </div>
+                            {EXCELLENCE_ITEMS.map((item, index) => (
+                                <ExcellenceItem key={index} {...item} />
+                            ))}
                         </div>
                     </div>
                     <picture className="bg-absolute-shape">
@@ -463,6 +418,8 @@ const ServiceThree = () => {
                         />
                     </picture>
                 </div>
+
+                {/* CTA Section */}
                 <section className="section_cta">
                     <div className="padding-global padding-section">
                         <div className="container-large">
@@ -473,7 +430,7 @@ const ServiceThree = () => {
                                 >
                                     <div className="work-process_content display-vertical">
                                         <h2 className="heading-style-h1">
-                                            We’re a{" "}
+                                            We're a{" "}
                                             <span className="text-style-secondary-font">top rated</span>{" "}
                                             <span>web application </span>
                                             <span className="text-style-secondary-font">design</span>{" "}
@@ -484,46 +441,15 @@ const ServiceThree = () => {
                                             scalability, and performance trusted by businesses worldwide!
                                         </p>
                                         <div role="list" className="cta_list display-vertical">
-                                            <div role="listitem" className="cta_list_item body-l">
-                                                User-Centric &amp; Scalable Designs
-                                            </div>
-                                            <div role="listitem" className="cta_list_item body-l">
-                                                Optimized for Speed &amp; Functionality
-                                            </div>
-                                            <div role="listitem" className="cta_list_item body-l">
-                                                Unlimited Revisions &amp; Clear, Transparent Contracts
-                                            </div>
-                                            <div role="listitem" className="cta_list_item body-l">
-                                                Seamless Cross-Device Experience
-                                            </div>
+                                            {CTA_LIST_ITEMS.map((item, index) => (
+                                                <div key={index} role="listitem" className="cta_list_item body-l">
+                                                    {item}
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                     <div className="display-flex margin-top margin-custom3">
-                                        <div
-                                            className="is-magnatic"
-                                            style={{
-                                                willChange: "transform",
-                                                transform:
-                                                    "translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                transformStyle: "preserve-3d"
-                                            }}
-                                        >
-                                            <a
-                                                data-w-id="8bb02b6a-0dfa-c39d-4ebf-2f7056810763"
-                                                href="/book-a-call"
-                                                className="button is-small w-inline-block"
-                                            >
-                                                <div className="button-text">Book a free call</div>
-                                                <div
-                                                    className="button-hover-bg"
-                                                    style={{
-                                                        transform:
-                                                            "translate3d(0px, 130%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
-                                                        transformStyle: "preserve-3d"
-                                                    }}
-                                                ></div>
-                                            </a>
-                                        </div>
+                                        <MagnaticButton href="/book-a-call" text="Book a free call" />
                                     </div>
                                 </div>
                                 <figure
@@ -545,6 +471,8 @@ const ServiceThree = () => {
                         </div>
                     </div>
                 </section>
+
+                {/* Other Services Section */}
                 <section className="section_other-services">
                     <div className="padding-global padding-section is-top-0">
                         <div className="container-large">
@@ -554,172 +482,15 @@ const ServiceThree = () => {
                                 </h2>
                             </div>
                             <div className="other-services_grid">
-                                <div className="other-service_card display-vertical">
-                                    <a
-                                        href="/sevices/mobile-application-design"
-                                        className="other-service_figure position-relative overflow-hidden w-inline-block"
-                                    >
-                                        <img
-                                            className="cover-image"
-                                            src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg"
-                                            alt="Mobile application service"
-                                            width={414}
-                                            height={259}
-                                            loading="lazy"
-                                            fetchpriority="low"
-                                            decoding="async"
-                                        />
-                                    </a>
-                                    <div className="other-service_content">
-                                        <div className="margin-bottom margin-small">
-                                            <h3>Mobile application design</h3>
-                                        </div>
-                                        <p>
-                                            We create mobile apps that not only fuel your growth but also
-                                            truly connect ...
-                                        </p>
-                                    </div>
-                                    <div className="display-flex">
-                                        <a
-                                            data-w-id="bdbc966e-3c4b-ff76-f07f-0dcb8ba5abe8"
-                                            href="/sevices/mobile-application-design"
-                                            className="button is-secondary w-inline-block is-secondary"
-                                        >
-                                            <div>View service details</div>
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width={14}
-                                                height={14}
-                                                viewBox="0 0 14 14"
-                                                fill="none"
-                                            >
-                                                <g opacity="0.9">
-                                                    <path
-                                                        d="M4.8125 2.625L9.1875 7L4.8125 11.375"
-                                                        stroke="currentColor"
-                                                        strokeWidth="1.4"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    ></path>
-                                                </g>
-                                            </svg>
-                                            <div className="button-hover-bg-two" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="other-service_card display-vertical">
-                                    <a
-                                        href="/sevices/website-design-branding"
-                                        className="other-service_figure position-relative overflow-hidden w-inline-block"
-                                    >
-                                        <img
-                                            className="cover-image"
-                                            src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c000326d559e692450982b_other-service-2-high.jpg"
-                                            alt="Mobile application service"
-                                            width={414}
-                                            height={259}
-                                            loading="lazy"
-                                            fetchpriority="low"
-                                            decoding="async"
-                                        />
-                                    </a>
-                                    <div className="other-service_content">
-                                        <div className="margin-bottom margin-small">
-                                            <h3>Website design and branding</h3>
-                                        </div>
-                                        <p>
-                                            We create mobile apps that not only fuel your growth but also
-                                            truly connect ...
-                                        </p>
-                                    </div>
-                                    <div className="display-flex">
-                                        <a
-                                            data-w-id="bdbc966e-3c4b-ff76-f07f-0dcb8ba5abe8"
-                                            href="/sevices/website-design-branding"
-                                            className="button is-secondary w-inline-block is-secondary"
-                                        >
-                                            <div>View service details</div>
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width={14}
-                                                height={14}
-                                                viewBox="0 0 14 14"
-                                                fill="none"
-                                            >
-                                                <g opacity="0.9">
-                                                    <path
-                                                        d="M4.8125 2.625L9.1875 7L4.8125 11.375"
-                                                        stroke="currentColor"
-                                                        strokeWidth="1.4"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    ></path>
-                                                </g>
-                                            </svg>
-                                            <div className="button-hover-bg-two" />
-                                        </a>
-                                    </div>
-                                </div>
-                                <div className="other-service_card display-vertical">
-                                    <a
-                                        href="/sevices/webflow-development"
-                                        className="other-service_figure position-relative overflow-hidden w-inline-block"
-                                    >
-                                        <img
-                                            className="cover-image"
-                                            src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg"
-                                            alt="Mobile application service"
-                                            width={414}
-                                            height={259}
-                                            loading="lazy"
-                                            fetchpriority="low"
-                                            decoding="async"
-                                        />
-                                    </a>
-                                    <div className="other-service_content">
-                                        <div className="margin-bottom margin-small">
-                                            <h3>Webflow Developement</h3>
-                                        </div>
-                                        <p>
-                                            We create mobile apps that not only fuel your growth but also
-                                            truly connect ...
-                                        </p>
-                                    </div>
-                                    <div className="display-flex">
-                                        <a
-                                            data-w-id="bdbc966e-3c4b-ff76-f07f-0dcb8ba5abe8"
-                                            href="/sevices/webflow-development"
-                                            className="button is-secondary w-inline-block is-secondary"
-                                        >
-                                            <div>View service details</div>
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width={14}
-                                                height={14}
-                                                viewBox="0 0 14 14"
-                                                fill="none"
-                                            >
-                                                <g opacity="0.9">
-                                                    <path
-                                                        d="M4.8125 2.625L9.1875 7L4.8125 11.375"
-                                                        stroke="currentColor"
-                                                        strokeWidth="1.4"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                    ></path>
-                                                </g>
-                                            </svg>
-                                            <div className="button-hover-bg-two" />
-                                        </a>
-                                    </div>
-                                </div>
+                                {OTHER_SERVICES.map((service, index) => (
+                                    <OtherServiceCard key={index} {...service} />
+                                ))}
                             </div>
                         </div>
                     </div>
                 </section>
             </main>
         </div>
-
     );
 };
 
