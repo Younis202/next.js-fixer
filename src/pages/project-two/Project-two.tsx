@@ -5,26 +5,26 @@ import React from 'react';
 // ============================================================
 
 const ARTICLE_TAGS = [
-    { label: 'Product' },
-    { label: 'UI UX Design' }
+    { label: 'Manufacturing' },
+    { label: 'Strategic Partnership' }
 ];
 
 const SERVICE_TAGS = [
-    { label: 'Branding design' },
-    { label: 'Web Design' },
-    { label: 'UI/UX Design' }
+    { label: 'Government Relations' },
+    { label: 'Deal Facilitation' },
+    { label: 'Market Entry' }
 ];
 
 const ABOUT_IMAGES = [
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c6439fd896bfa234e8c08f_dd-summit-about-1-high.jpg',
-        alt: 'Dontdiesummit laptop mockup',
+        alt: 'Manufacturing partnership meeting',
         width: 635,
         height: 644
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c643b877a75d96451a45d9_dd-summit-about-2-high.jpg',
-        alt: 'Dontdiesummit mobile mockup',
+        alt: 'Strategic deal signing',
         width: 635,
         height: 644
     }
@@ -34,41 +34,41 @@ const SOLUTION_CARDS = [
     {
         number: '001',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57151ca21d031b662d6ea_calender.svg',
-        title: 'Initial Brief',
-        description: "Start by gathering an initial design brief to understand the client's aspirations"
+        title: 'Initial Discovery',
+        description: "Start by gathering market objectives to understand the client's expansion aspirations"
     },
     {
         number: '002',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57150a90a95057f29dba9_person.svg',
-        title: 'Questionnaire',
-        description: 'Ask insightful questions to clarify project requirements and gather valuable insights.'
+        title: 'Stakeholder Mapping',
+        description: 'Identify key decision-makers to clarify access requirements and gather strategic insights.'
     },
     {
         number: '003',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c57150b4de1911f9b773e8_estimate.svg',
-        title: 'Estimate',
-        description: "Provide a transparent project quote that outlines costs and timelines, ensuring with the client's budget."
+        title: 'Engagement Strategy',
+        description: "Provide a transparent execution roadmap that outlines milestones and timelines, ensuring alignment with the client's objectives."
     },
     {
         number: '004',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c571504fcf89b38f96ae4c_kickoff.svg',
-        title: 'Project Kick-off',
-        description: 'Once the client approves the quote, initiate the project with a well-defined plan and open lines of communication.'
+        title: 'Access Activation',
+        description: 'Once the client approves the strategy, initiate engagement with a well-defined plan and direct lines of communication.'
     }
 ];
 
 const RELATED_PROJECTS = [
     {
-        href: '/projects/nashouse',
+        href: '/projects/altris-ai',
         imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b847869e0d4e49c7a71e_next-project-low.webp',
         imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b848efd444c01860932d_next-project-high.jpg',
-        title: 'Nashouse to redesign their  full website'
+        title: 'Altris AI expand to  MENA markets'
     },
     {
-        href: '/projects/nastravel',
+        href: '/projects/fintech-licensing',
         imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b84767fad49cee6f2e3b_next-project-2-low.webp',
         imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c5b8485b462b3a3a91ebd7_next-project-2-high.jpg',
-        title: 'Nastravels to redesign their  full website'
+        title: 'FinTech Solutions secure  regulatory approval'
     }
 ];
 
@@ -129,7 +129,7 @@ const RelatedProjectItem = ({ href, imageLow, imageHigh, title }) => (
                 className="cover-image"
                 src={imageLow}
                 data-lazy-src={imageHigh}
-                alt="omoskillo website mockup"
+                alt="strategic partnership"
                 width={614}
                 height={576}
                 loading="lazy"
@@ -139,7 +139,7 @@ const RelatedProjectItem = ({ href, imageLow, imageHigh, title }) => (
         </a>
         <div className="project_content">
             <h3 className="heading-style-h2">
-                <div className="display-inline">Omotive helped </div>
+                <div className="display-inline">Wasel unlocked </div>
                 <div className="display-inline text-style-secondary-font">{title}</div>
             </h3>
             <div
@@ -179,20 +179,18 @@ const ProjectTwo = () => {
                                         ))}
                                     </div>
                                     <h1 className="project-details_title is-two">
-                                        Omotive helped{" "}
-                                        <span className="text-style-secondary-font">Dontdiesummit</span>{" "}
-                                        to <span className="text-style-secondary-font">redesign</span>{" "}
-                                        their&nbsp;&nbsp;full website
+                                        Wasel facilitated{" "}
+                                        <span className="text-style-secondary-font">Industrial Corp</span>{" "}
+                                        strategic <span className="text-style-secondary-font">partnership</span>{" "}
+                                        across&nbsp;&nbsp;regional markets
                                     </h1>
                                 </div>
                                 <div className="project-details_content_right display-vertical">
                                     <p className="project-details-header_text body-l">
-                                        We offer a comprehensive service, including branding design, web
-                                        design, and UI/UX design, to create a cohesive online presence
-                                        for our clients.
+                                        We delivered comprehensive execution, including government relations coordination, deal structuring, and market entry facilitation, to create accelerated partnership closure for our client.
                                     </p>
                                     <div className="heading-style-h2">
-                                        Our <span className="text-style-secondary-font">service</span>
+                                        Our <span className="text-style-secondary-font">solution</span>
                                     </div>
                                     <div className="service-tag_wrapper display-flex is-left">
                                         {SERVICE_TAGS.map((tag, index) => (
@@ -205,7 +203,7 @@ const ProjectTwo = () => {
                                 <img
                                     className="cover-image"
                                     src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c6436f2e55da40e03b46f3_dd-summit-header-high-min.jpg"
-                                    alt="Dontdiesummit header mockup"
+                                    alt="Manufacturing partnership success"
                                     width={1290}
                                     height={644}
                                     loading="eager"
@@ -224,13 +222,10 @@ const ProjectTwo = () => {
                             <div className="section_header is-project">
                                 <h2 className="section_title heading-style-h1">
                                     About{" "}
-                                    <span className="text-style-secondary-font">Dontdiesummit</span>
+                                    <span className="text-style-secondary-font">Industrial Corp</span>
                                 </h2>
                                 <p className="header-text body-l">
-                                    Welcome to the Don't Die Summit—a movement focused on living life
-                                    on our own terms. We're building a future where every tomorrow
-                                    holds endless possibilities, and we choose how long we exist,
-                                    driven by the desire to always do more
+                                    Welcome to Industrial Corp's expansion story—a strategic movement focused on unlocking regional manufacturing partnerships. We're building presence where every market holds strategic possibilities, and we determine our expansion pace, driven by the desire to always achieve more
                                 </p>
                             </div>
                             <div className="about-project_grid">
@@ -252,10 +247,7 @@ const ProjectTwo = () => {
                                         The <span className="text-style-secondary-font">challenge</span>
                                     </h2>
                                     <p className="project_section_text body-l">
-                                        Designing the Don't Die Summit website means creating a space
-                                        that inspires action and hope, reflecting the mission to embrace
-                                        life's possibilities and the freedom to live on our own
-                                        terms—all in a simple, engaging experience
+                                        Facilitating Industrial Corp's manufacturing partnership meant navigating complex regulatory frameworks, securing ministry endorsements, and establishing credibility across multiple MENA jurisdictions—all while managing tight timelines for strategic deal closure and regional market entry
                                     </p>
                                 </div>
                                 <div className="project_section_header display-flex">
@@ -263,17 +255,13 @@ const ProjectTwo = () => {
                                         The <span className="text-style-secondary-font">solution</span>
                                     </h2>
                                     <p className="project_section_text body-l">
-                                        The solution is to design Dontdie summit website that feels as
-                                        vibrant and inspiring as Nas Daily's stories. With easy
-                                        navigation, beautiful visuals, and a smooth experience, we'll
-                                        bring their mission to life and make it simple for users to
-                                        connect with the world through their lens
+                                        The solution was to design strategic engagement pathway that feels as dynamic and result-driven as the client's vision. With focused stakeholder coordination, executive-level access, and seamless execution, we'll bring their expansion objectives to reality and make it simple for partners to align through our proven framework
                                     </p>
                                 </div>
                             </div>
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1 text-color-alternate">
-                                    The <span className="text-style-secondary-font">Process</span>
+                                    The <span className="text-style-secondary-font">Execution</span>
                                 </h2>
                             </div>
                             <div className="solution_grid">
@@ -308,12 +296,12 @@ const ProjectTwo = () => {
                         <div className="container-large">
                             <div className="header_content">
                                 <h1 className="home-header_title">
-                                    <div className="display-inline">Style guide</div>
+                                    <div className="display-inline">Strategic framework</div>
                                 </h1>
                                 <div className="home-header_content-inner display-vertical is-left">
                                     <p className="project_other-text body-l">
-                                        our primary objective is to ensure a consistent and cohesive
-                                        visual and interactive experience across all digital
+                                        our primary objective is to ensure consistent and coordinated
+                                        stakeholder engagement across all ministerial and enterprise
                                         touchpoints.
                                     </p>
                                 </div>
@@ -323,7 +311,7 @@ const ProjectTwo = () => {
                                     className="cover-image"
                                     src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c643f5e2bf042411715e8f_dd-summit-style-guide-low.webp"
                                     data-lazy-src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c643f5c72944e6ef708a8c_dd-summit-style-guide-high.png"
-                                    alt="Dontdiesummit style guide"
+                                    alt="Partnership strategy framework"
                                     width={1290}
                                     height={878}
                                     loading="lazy"
@@ -341,7 +329,7 @@ const ProjectTwo = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    <span className="text-style-secondary-font">Home</span> Screen
+                                    <span className="text-style-secondary-font">Stakeholder</span> Network
                                 </h2>
                             </div>
                             <figure className="home-screen_media position-relative overflow-hidden">
@@ -349,7 +337,7 @@ const ProjectTwo = () => {
                                     className="cover-image"
                                     src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c6441e92c3a5cb552d2658_dd-summit-home-screen-low.webp"
                                     data-lazy-src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c6441e37c85eae3282207e_dd-summit-home-screen-high-min.jpg"
-                                    alt="Dontdiesummit homescreen mockup"
+                                    alt="Strategic stakeholder mapping"
                                     width={1290}
                                     height={929}
                                     loading="lazy"
@@ -367,7 +355,7 @@ const ProjectTwo = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    <span className="text-style-secondary-font">Others</span>Screen
+                                    <span className="text-style-secondary-font">Deal</span>Timeline
                                 </h2>
                             </div>
                             <div className="position-relative overflow-hidden">
@@ -412,10 +400,7 @@ const ProjectTwo = () => {
                                         alt=""
                                     />
                                     <p className="body-xl text-color-primary">
-                                        Omotive Design Agency did an outstanding job designing the
-                                        websites for Nassummit, Nashouse, Nastravel, and Nasdaily. The
-                                        sites are intuitive, visually engaging, and perfectly aligned
-                                        with our brand. Highly recommend!
+                                        Wasel EBDS facilitated our strategic partnership with precision and expertise. Their network across manufacturing authorities and enterprise decision-makers is unmatched. They delivered ministerial access and deal closure in record time. Highly recommend!
                                     </p>
                                     <div className="client-testimonial-card-footer">
                                         <div className="client-testimonial-card-user">
@@ -424,7 +409,7 @@ const ProjectTwo = () => {
                                                     <img
                                                         width={70}
                                                         height={70}
-                                                        alt="nasir hussain"
+                                                        alt="omar rashid"
                                                         loading="lazy"
                                                         src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bda4143cdb248a8ea2fe9c_user-testimonial-1.png"
                                                         className="client-testimonial-media-image"
@@ -461,17 +446,17 @@ const ProjectTwo = () => {
                                             </div>
                                             <div>
                                                 <div className="client-testimonial-card-user-name text-bold">
-                                                    Nuseir Yassin
+                                                    Omar Rashid
                                                 </div>
                                                 <div className="client-testimonial-card-user-designation">
-                                                    Founder &amp; CEO at Nas Company
+                                                    Chief Commercial Officer, Energy Solutions
                                                 </div>
                                             </div>
                                         </div>
                                         <img
                                             src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c6972a4a3f789f2cb8de1a_dd-sumit-logo.svg"
                                             loading="lazy"
-                                            alt="Don't die summit logo"
+                                            alt="Industrial Corp logo"
                                             className="client_testimonial-project-logo"
                                         />
                                     </div>
@@ -487,7 +472,7 @@ const ProjectTwo = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Next <span className="text-style-secondary-font">Projects</span>
+                                    Next <span className="text-style-secondary-font">Deals</span>
                                 </h2>
                             </div>
                             <div className="related-project_grid">

@@ -5,65 +5,65 @@ import React from 'react';
 // ============================================================
 
 const WORK_PROCESS_FEATURES = [
-    'Boost User Engagement and Drive Results',
-    'Full Ownership',
-    'Ultra-Fast Expedited Service Available'
+    'Ministerial-Level Access & Government Relations',
+    'Risk-Sharing Partnership Model',
+    'Proven Track Record Across MENA Healthcare'
 ];
 
 const DESIGN_PROCESS_STEPS = [
     {
         number: '001',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bff7f640912009094a64fd_heart-icon.svg',
-        title: "Let's Meet",
-        description: "We want to dig deep, and find out what makes you tick. Your values, expertise and company history are behind everything we do, so let us"
+        title: "Foundation & Market Anchoring",
+        description: "We identify and engage anchor partners in priority countries, establish initial government and enterprise relationships, and conduct comprehensive market mapping and stakeholder analysis"
     },
     {
         number: '002',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa4bec44a21c544a32d6_tictactoi.svg',
-        title: 'Moodboard Dreaming',
-        description: "We're a collaborative and open-minded team that creates exceptional designs by embracing every voice and idea"
+        title: 'Strategic Pilots',
+        description: "We launch institution-scale pilot programs with defined expansion pathways, generate localized clinical evidence and reference case studies to build proof points for broader market penetration"
     },
     {
         number: '003',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa82bb83378bdacd6b5e_desktop-settings.svg',
-        title: 'Figma UI Design',
-        description: 'Now things start to come together. We start bringing your plan and vision to life and create the website UI in Figma, building the foundations'
+        title: 'Scale & Institutionalization',
+        description: 'We expand within established healthcare groups, engage national insurance schemes, support integration into national screening programs, and position for inclusion in national health digitalization strategies'
     },
     {
         number: '004',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffaa5b7cb67f2e43f6136_code.svg',
-        title: 'Webflow Development',
-        description: "Bob the Builder's got nothing on us. Our website development geniuses get to work recreating the site UI in WordPress, Shopify, HubSpot"
+        title: 'Regulatory Navigation',
+        description: "We manage regulatory approvals and compliance, navigate procurement cycles and tender processes, and facilitate local market entry and operational setup"
     },
     {
         number: '005',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffb1e3e5f1a358c9f068c_quality.svg',
-        title: 'Quality Assurance',
-        description: "Checkboards ready—we rigorously test every website element to ensure it's bug-free and ready for launch. Smooth sailing ahead!"
+        title: 'Stakeholder Engagement',
+        description: "We maintain direct relationships with C-suite executives, provide strategic access to ministry-level decision-makers, and represent partners in institutional and policy discussions"
     },
     {
         number: '006',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffba93278e50f2580a7d5_grid.svg',
-        title: 'We Have Liftoff!',
-        description: '3...2...1... Liftoff! Your rocket ship is ready to go. We are live to launch and watch the crowds burst with excitement.'
+        title: 'Continuous Momentum',
+        description: 'We structure scalable programs with clear deployment pathways, design outcome-driven pilots, and provide continuous on-ground follow-up and momentum management'
     }
 ];
 
 const CORE_VALUES = [
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02cacd9ea0f26bb5ae4da_blueprinnt-icon.svg',
-        title: 'Blueprint',
-        text: "We dive deep into your brand, conducting research and analysis to develop tailored blueprints that set you up for increased recognition within today's market."
+        title: 'Shared Execution',
+        text: "We are invested operators, not passive intermediaries. We function as a dedicated regional execution partner committed to your success in MENA markets."
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6fe961651407268d79fd8_foundation-icon.svg',
-        title: 'Foundation',
-        text: 'Our team brings your brand to life through intuitive websites and engaging mobile apps, innovation to captivate and keep loyal audiences.'
+        title: 'Aligned Incentives',
+        text: 'Our success is tied directly to your institutional adoption. We only succeed when you succeed, ensuring complete alignment of our interests with your long-term goals.'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6feaff171efceff6d1921_expansion-icon.svg',
-        title: 'Expansion',
-        text: 'We inspire deeper connection and help you realize lasting measurable results through cross-channel the right message at the right time.'
+        title: 'Long-Term Positioning',
+        text: 'We focus on sustainable market leadership through deep institutional integration, creating enduring competitive advantages across MENA healthcare systems.'
     }
 ];
 
@@ -71,60 +71,60 @@ const EXCELLENCE_ITEMS = [
     {
         number: '001',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c01087aa70a95dc2666593_revision-icon.svg',
-        title: 'Identify  Your Business Challenges',
-        text: "We offer unlimited revisions as standard. So rest assured that be happy with all deliverables!"
+        title: 'Government-Led Health Initiatives',
+        text: "Direct access to ministry-level decision-makers and representation in institutional health policy discussions across the MENA region"
     },
     {
         number: '002',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c0200dc5b1446fccbaf4dc_hidden-fees-icon.svg',
-        title: 'No Hidden Fees',
-        text: 'Transparent web design services with no hidden fees, delivering clear, upfront pricing for your business'
+        title: 'Major Hospital Chains & Networks',
+        text: 'Strategic partnerships with leading healthcare institutions and large-scale hospital networks throughout MENA markets'
     },
     {
         number: '003',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02042f98a35e36081b3ca_process-icon.svg',
-        title: 'A Personal Process',
-        text: 'We focus on personalized processes that make your journey smooth, friendly, and enjoyable from start to finish'
+        title: 'Risk-Sharing Model',
+        text: 'We absorb upfront costs and only succeed when you do. Ministerial-level success fee payable only after confirmed introductions'
     },
     {
         number: '004',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c020b2859565df01fbcb78_sheet-icon.svg',
-        title: 'Efficient Project Management',
-        text: 'With our efficient project management, we ensure a smooth, friendly experienc, delivering results on time and with care'
+        title: 'Reference-Level Deployments',
+        text: 'We create institutional-scale implementations that drive organic downstream adoption across the broader clinical ecosystem'
     },
     {
         number: '005',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c020ebc1250a94c3f2016c_track-icon.svg',
-        title: 'Proven Track Record',
-        text: "With our proven track record, we've built lasting relationships and deliver results you can count on"
+        title: 'Revenue Share Partnership',
+        text: "30-35% revenue share model with no ongoing transactional costs. We cover follow-ups, negotiations, and all operational expenses"
     }
 ];
 
 const CTA_LIST_ITEMS = [
-    'User-Centric & Scalable Designs',
-    'Optimized for Speed & Functionality',
-    'Unlimited Revisions & Clear, Transparent Contracts',
-    'Seamless Cross-Device Experience'
+    'Ministerial & C-Suite Access',
+    'No Per-Meeting Fees or Hidden Costs',
+    'Proven Healthcare Market Penetration',
+    'Dedicated Regional Execution Partner'
 ];
 
 const OTHER_SERVICES = [
     {
-        href: '/sevices/mobile-application-design',
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg',
-        title: 'Mobile application design',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        href: '/services/government-relations',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b1f4e6db0bda26bd26cacd_core-service-1-high.jpg',
+        title: 'Government Relations',
+        description: 'Delivering ministerial access solutions that combine strategic positioning with execution...'
     },
     {
-        href: '/sevices/website-design-branding',
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c000326d559e692450982b_other-service-2-high.jpg',
-        title: 'Website design and branding',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        href: '/services/market-entry',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d70694bedede1779d8aa3c_core-service-mobile-app-high.jpg',
+        title: 'Market Entry Support',
+        description: 'Delivering market access solutions that combine local expertise with strategic networks...'
     },
     {
-        href: '/sevices/webflow-development',
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg',
-        title: 'Webflow Developement',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        href: '/services/deal-facilitation',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706f0a79f0c901c03469c_core-service-webflow-high.jpg',
+        title: 'Deal Facilitation',
+        description: 'Delivering closure-focused solutions that combine tactical navigation with momentum...'
     }
 ];
 
@@ -180,7 +180,7 @@ const OtherServiceCard = ({ href, image, title, description }) => (
             <img
                 className="cover-image"
                 src={image}
-                alt="Mobile application service"
+                alt={title}
                 width={414}
                 height={259}
                 loading="lazy"
@@ -260,27 +260,25 @@ const ServiceThree = () => {
                                 <div className="header_content">
                                     <h1 className="home-header_title">
                                         <div className="display-inline">
-                                            Turning Your Ideas into{" "}
-                                            <span className="text-style-secondary-font">web</span>
+                                            Unlocking MENA Markets with{" "}
+                                            <span className="text-style-secondary-font">Strategic</span>
                                         </div>
                                         <div className="br hide-mobile-portrait" />
                                         <div className="display-inline text-style-secondary-font">
-                                            app Experiences
+                                            Partnership & Execution
                                         </div>
                                     </h1>
                                     <div className="home-header_content-inner display-vertical is-left">
                                         <p className="service_header-text text-size-large">
-                                            We create Web apps that not only fuel your growth but also
-                                            truly connect with your users, delivering solutions that make
-                                            an impact
+                                            We position companies as regional clinical standards through institutional-scale adoption via government partnerships and enterprise healthcare systems across MENA
                                         </p>
                                     </div>
                                 </div>
                                 <figure className="service_header_media position-relative overflow-hidden">
                                     <img
                                         className="cover-image"
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02af3394f82bb121e9e54_web-apps-header-high.jpg"
-                                        alt="web app mockup"
+                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b5b3236858ebec79732441_service-slider-2-high.jpg"
+                                        alt="Strategic partnership signing"
                                         width={1290}
                                         height={644}
                                         loading="eager"
@@ -306,15 +304,12 @@ const ServiceThree = () => {
                                         <h2 className="heading-style-h1 work-process_title">
                                             Why Our{" "}
                                             <span className="text-style-secondary-font">
-                                                Web App Design Services
+                                                Strategic Partnership
                                             </span>{" "}
-                                            Are the Right Fit for You
+                                            Framework Delivers Results
                                         </h2>
                                         <p className="work-process_text body-l">
-                                            Engage your users and grow your app with designs that truly
-                                            connect. We provide solutions tailored to your goals, along
-                                            with full access to tools and top talent—all delivered quickly
-                                            and hassle-free
+                                            We function as a dedicated regional execution partner, not merely an advisory consultant. Our approach prioritizes institutional-scale adoption through government partnerships and major healthcare systems—establishing you as a regional standard rather than pursuing fragmented expansion
                                         </p>
                                         <ul role="list" className="work-process_list display-vertical">
                                             {WORK_PROCESS_FEATURES.map((feature, index) => (
@@ -325,7 +320,7 @@ const ServiceThree = () => {
                                         </ul>
                                     </div>
                                     <div className="display-flex margin-top margin-custom3">
-                                        <MagnaticButton href="/contact" text="Get a quote" />
+                                        <MagnaticButton href="/contact" text="Start Your Expansion" />
                                     </div>
                                 </div>
                                 <figure
@@ -334,8 +329,8 @@ const ServiceThree = () => {
                                 >
                                     <img
                                         className="cover-image"
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02ba80b1495fd2cf74477_web-apps-min-high.jpg"
-                                        alt="web appliction mockup"
+                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e5671cd299e19a24dae_service-slider-3-high.jpg"
+                                        alt="Government relations meeting"
                                         width={614}
                                         height={488}
                                         loading="lazy"
@@ -354,8 +349,8 @@ const ServiceThree = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Web application design{" "}
-                                    <span className="text-style-secondary-font">process</span>
+                                    Phased Expansion{" "}
+                                    <span className="text-style-secondary-font">Roadmap</span>
                                 </h2>
                             </div>
                             <div className="design-process_grid">
@@ -373,8 +368,8 @@ const ServiceThree = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    How we're{" "}
-                                    <span className="text-style-secondary-font">unique</span>
+                                    Partnership{" "}
+                                    <span className="text-style-secondary-font">Philosophy</span>
                                 </h2>
                             </div>
                             <div className="core-value_gird">
@@ -392,8 +387,8 @@ const ServiceThree = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1 text-color-alternate">
-                                    Why We{" "}
-                                    <span className="text-style-secondary-font">Stand Out</span>
+                                    Strategic{" "}
+                                    <span className="text-style-secondary-font">Market Access</span>
                                 </h2>
                             </div>
                             {EXCELLENCE_ITEMS.map((item, index) => (
@@ -430,15 +425,14 @@ const ServiceThree = () => {
                                 >
                                     <div className="work-process_content display-vertical">
                                         <h2 className="heading-style-h1">
-                                            We're a{" "}
-                                            <span className="text-style-secondary-font">top rated</span>{" "}
-                                            <span>web application </span>
-                                            <span className="text-style-secondary-font">design</span>{" "}
-                                            agency
+                                            A{" "}
+                                            <span className="text-style-secondary-font">competitive</span>{" "}
+                                            <span>commercial </span>
+                                            <span className="text-style-secondary-font">structure</span>{" "}
+                                            that aligns our success
                                         </h2>
                                         <p className="work-process_text body-l">
-                                            Our web application designs are highly rated for usability,
-                                            scalability, and performance trusted by businesses worldwide!
+                                            Unlike typical market entry partners who charge per-meeting fees and lower revenue shares, our model eliminates ongoing transactional costs. We absorb all subsequent expenses and only succeed when you do
                                         </p>
                                         <div role="list" className="cta_list display-vertical">
                                             {CTA_LIST_ITEMS.map((item, index) => (
@@ -449,7 +443,7 @@ const ServiceThree = () => {
                                         </div>
                                     </div>
                                     <div className="display-flex margin-top margin-custom3">
-                                        <MagnaticButton href="/book-a-call" text="Book a free call" />
+                                        <MagnaticButton href="/book-a-call" text="Discuss Your Market Entry" />
                                     </div>
                                 </div>
                                 <figure
@@ -458,8 +452,8 @@ const ServiceThree = () => {
                                 >
                                     <img
                                         className="cover-image"
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c0044a3edafe371b946e46_cta-high.jpg"
-                                        alt="reviewxpo showreel mockup"
+                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e91c8a9cb38c9576b81_service-slider-4-high.jpg"
+                                        alt="Deal facilitation success"
                                         width={614}
                                         height={488}
                                         loading="lazy"
@@ -478,7 +472,7 @@ const ServiceThree = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Other <span className="text-style-secondary-font">services</span>
+                                    Other <span className="text-style-secondary-font">solutions</span>
                                 </h2>
                             </div>
                             <div className="other-services_grid">

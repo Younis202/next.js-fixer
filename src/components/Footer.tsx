@@ -28,7 +28,7 @@ const Footer = () => {
                                             id="textToCopy"
                                             className="footer_cta_text text-color-alternate"
                                         >
-                                            mufidul@omotive.co
+                                            contact@waselebds.com
                                         </div>
                                         <div className="copy-button display-vertical  is-center">
                                             <svg
@@ -74,7 +74,7 @@ const Footer = () => {
                                             href="/book-a-call"
                                             className="button is-small w-inline-block is-gradient"
                                         >
-                                            <div className="button-text">Book a free call</div>
+                                            <div className="button-text">Schedule a consultation</div>
                                             <div
                                                 className="button-hover-bg"
                                                 style={{
@@ -89,8 +89,8 @@ const Footer = () => {
                                 <figure className="footer_cta_figure">
                                     <img
                                         className="cover-image"
-                                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42ec1622de67a399d8e34_mofidul-tapadar.webp"
-                                        data-lazy-src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42bec2143b3e4e58b5c93_mofidul-tapadar.jpg"
+                                        src="https://ik.imagekit.io/ihhlj9kpd/Gemini_Generated_Image_zdfislzdfislzdfi.png"
+                                        data-lazy-src="https://ik.imagekit.io/ihhlj9kpd/Gemini_Generated_Image_zdfislzdfislzdfi.png"
                                         alt=""
                                         width={186}
                                         height={155}
@@ -116,12 +116,11 @@ const Footer = () => {
                                 />
                             </a>
                             <p className="footer_text text-color-alternate">
-                                Delivering user-centric solutions that&nbsp;&nbsp;combine
-                                creativity with strategy to drive business growth
+                                Delivering strategic market access solutions that combine ministerial connections with execution excellence to drive MENA expansion
                             </p>
                         </div>
                         <div className="footer_middle-right">
-                            <div className="heading-style-h3 text-color-alternate">Socials</div>
+                            <div className="heading-style-h3 text-color-alternate">Connect</div>
                             <div className="footer_social-link-wrapper">
                                 <div
                                     className="is-magnatic"
@@ -134,11 +133,11 @@ const Footer = () => {
                                 >
                                     <a
                                         data-w-id="1dc7bf29-b59a-c97d-ec7d-00e476be4559"
-                                        href="https://dribbble.com/designopsagency"
+                                        href="#"
                                         target="_blank"
                                         className="footer_social-link w-inline-block"
                                     >
-                                        <div>Dribbble</div>
+                                        <div>Twitter</div>
                                         <div className="footer_social-overlay" />
                                         <div
                                             className="button-hover-bg"
@@ -161,11 +160,11 @@ const Footer = () => {
                                 >
                                     <a
                                         data-w-id="1dc7bf29-b59a-c97d-ec7d-00e476be455d"
-                                        href="https://www.behance.net/designopsagency"
+                                        href="#"
                                         target="_blank"
                                         className="footer_social-link w-inline-block"
                                     >
-                                        <div>Behance</div>
+                                        <div>Email</div>
                                         <div className="footer_social-overlay" />
                                         <div
                                             className="button-hover-bg"
@@ -188,7 +187,7 @@ const Footer = () => {
                                 >
                                     <a
                                         data-w-id="1dc7bf29-b59a-c97d-ec7d-00e476be4561"
-                                        href="https://www.linkedin.com/company/omotive-agency/?viewAsMember=true"
+                                        href="#"
                                         target="_blank"
                                         className="footer_social-link w-inline-block"
                                     >
@@ -210,7 +209,7 @@ const Footer = () => {
                     <div className="footer_bottom">
                         <div className="footer_service-menu">
                             <a
-                                href="https://clutch.co/profile/omotive#highlights"
+                                href="#"
                                 target="_blank"
                                 className="clutch-link w-inline-block"
                             >
@@ -234,7 +233,7 @@ const Footer = () => {
                                 <a href="/services" className="footer_service-link">
                                     Services
                                 </a>
-                                <a href="/services" className="footer_service-link">
+                                <a href="/projects" className="footer_service-link">
                                     Projects
                                 </a>
                                 <a href="/contact" className="footer_service-link">
@@ -254,7 +253,7 @@ const Footer = () => {
                                     alt=""
                                 />
                             </a>
-                            <div className="footer_copyright-text">Made with Love in NYC ❤</div>
+                            <div className="footer_copyright-text">Made with Love Wasel Team ❤</div>
                             <a href="#header" className="back-to-top w-inline-block w--current">
                                 <div>Back to top</div>
                                 <svg

@@ -1,5 +1,4 @@
 import React from 'react';
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
 
 // ==========================================
 // DATA CONFIGURATIONS
@@ -7,52 +6,46 @@ import { useWebflowScripts } from '@/hooks/useWebflowScripts';
 
 // Experience Stats Data
 const EXPERIENCE_STATS = [
-    {
-        value: '2.3M',
-        label: 'Client raised',
-    },
-    {
-        value: '100%',
-        label: 'Client Satisfaction',
-    },
-    {
-        value: '50+',
-        label: 'Projects completed',
-    },
+    { value: '500+', label: 'Strategic Connections' },
+    { value: '98%', label: 'Success Rate' },
+    { value: '50+', label: 'Deals Closed' },
 ];
+
 
 // Core Values Data
 const CORE_VALUES = [
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b475a572811e4459f4e09a_static-design-icon.svg',
-        title: 'Strategic design',
-        text: 'We approach every project with dedication and care, treating it as our own to deliver impactful designs and exceptional results',
+        title: 'Deep access inside ministries and companies',
+        text: 'We\'ve built relationships with key decision-makers across public and private sectors.',
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d9231d2e7b3b0c3f05841d_ego-free.svg',
-        title: 'Ego-free focus',
-        text: "We're a collaborative and open-minded team that creates exceptional designs by embracing every voice and idea",
+        title: 'We operate with discretion and efficiency',
+        text: 'Our business development approach prioritizes confidentiality and results.',
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d92340de8dc811a08388d8_graph.svg',
-        title: 'Lead with innovation',
-        text: 'We embrace challenges as opportunities to innovate, grow, and deliver impactful solutions through collaboration and creativity.',
+        title: 'Experience closing real, high-stakes deals',
+        text: 'Our track record includes facilitating partnerships that others couldn\'t make happen.',
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c14cf45a3dd5cefd23b615_chrome-extention.svg',
-        title: 'Expect the Best',
-        text: 'We build real connections through trust, kindness, and open talks, making every interaction simple and smooth',
+        title: 'Trusted by serious decision-makers',
+        text: 'We\'ve earned the confidence of executives and officials who value discretion and results.',
+    },
+
+    {
+        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d92340de8dc811a08388d8_graph.svg',
+        title: 'Navigate with strategic intelligence',
+        text: 'We embrace complexity as opportunity to strategize, connect, and deliver breakthrough solutions through relationship capital and execution.',
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d923bb330856358443adf5_file.svg',
-        title: 'Deliver best Every Time',
-        text: 'We strive for excellence in every detail, delivering results that reflect our passion and commitment to quality',
+        title: 'Deliver results every engagement',
+        text: 'We drive excellence in every connection, delivering outcomes that reflect our commitment to strategic execution and market access',
     },
-    {
-        icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6feaff171efceff6d1921_expansion-icon.svg',
-        title: 'Empathy-driven design',
-        text: 'We listen with empathy, value diverse perspectives, and connect with people through openness and understanding',
-    },
+
 ];
 
 // Process Steps Data
@@ -60,48 +53,48 @@ const PROCESS_STEPS = [
     {
         number: '//001',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b577a45d72d1df495cccb0_business-step-icon.svg',
-        title: 'Identify Your Business Challenges',
-        description: 'Identify key challenges and create tailored solutions to drive your business forward',
+        title: 'Identify Your Market Objectives',
+        description: 'Identify key access challenges and create tailored engagement strategies to accelerate your expansion',
     },
     {
         number: '//002',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b577a45d72d1df495cccb0_business-step-icon.svg',
-        title: 'Discover Effective Solutions',
-        description: 'Find tailored solutions to solve your challenges and boost your business growth',
+        title: 'Map Strategic Stakeholders',
+        description: 'Map critical decision-makers and regulatory pathways to unlock your market opportunities',
     },
     {
         number: '//003',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b57966ce0989b332aa83a3_eye-search-icon.svg',
-        title: 'Mix Your Hope & Our Creativity',
-        description: 'Combining your vision with our creativity to deliver outstanding results',
+        title: 'Leverage Our Network & Your Vision',
+        description: 'Combining your objectives with our connections to unlock high-impact opportunities',
     },
     {
         number: '//004',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b57a72027be6ac0c422f7f_result-sheet-icon.svg',
-        title: 'Deliver Outstanding Result',
-        description: 'Delivering high-quality results that exceed expectations and drive success',
+        title: 'Execute Deal Closure',
+        description: 'Delivering strategic outcomes that exceed expectations and unlock sustainable growth',
     },
 ];
 
 // Team Members Data
 const TEAM_MEMBERS = [
     {
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b47fff6ddf7a8b6dd37239_mufidul%20islam%20tapadar%20high%20quality.jpg',
-        name: 'Mufidul islam tapadar',
-        designation: 'Founder & Lead product designer',
-        alt: 'Founder & Lead product designer',
+        image: 'https://ik.imagekit.io/pcet3dvcu/462118149_614484107672713_5822809619534374935_n.jpg?updatedAt=1761528522323',
+        name: 'Younis Mohamed',
+        designation: 'The Digital Native',
+        alt: 'Next-Generation Solutions. Currently mastering Software Engineering at Karabuk University in Turkey, Younis represents the future of business development. While others see technology as a tool, he sees it as a language — one that opens doors in ways traditional approaches never could. His developer mindset brings systematic thinking to relationship building, treating every connection as code that can be optimized.',
     },
     {
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/688850a9e6e61ea20272cd4b_saim-ahammed-high.jpg',
-        name: 'Siam Hossain',
-        designation: 'Business developer',
-        alt: 'Business developer',
+        image: 'https://ik.imagekit.io/ihhlj9kpd/WhatsApp20Image202025-04-1920at2000.webp',
+        name: 'Ahmed Seraj',
+        designation: 'The Strategist',
+        alt: 'Cross-Continental Perspective. From medical corridors of Al-Farabi University in Kazakhstan to the business halls of Cairo University, Ahmed developed an analytical mind that sees beyond the surface. His medical background trained him to diagnose complex problems quickly, while his business education taught him to prescribe the right solutions. In business development, this translates to identifying the pulse of any deal and knowing exactly where to apply pressure for results.',
     },
     {
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4817902030315b521d6c8_ahsanul-islam-tapadar-high-quality.jpg',
-        name: 'Ahsanul islam tapadar',
-        designation: 'Head of design',
-        alt: 'Head of design',
+        image: 'https://ik.imagekit.io/pcet3dvcu/personal%20(1).png?updatedAt=1761527582055',
+        name: 'Hossam El Haggar',
+        designation: 'The Systems Architect',
+        alt: 'Engineering Precision Meets Strategic Execution. Mechanical engineering at Fayoum University, advanced studies in Kazakhstan — Hossam thinks in systems and processes. But he applies this engineering mindset to something far more complex: human networks. He sees business relationships like mechanical systems — understanding every moving part, every point of leverage, and exactly how to optimize for maximum output.',
     },
 ];
 
@@ -177,7 +170,7 @@ const ProcessItem = ({
                         href="/projects"
                         className="button is-small w-inline-block is-gradient"
                     >
-                        <div className="button-text">View all project</div>
+                        <div className="button-text">View all deals</div>
                         <div
                             className="button-hover-bg"
                             style={{
@@ -231,9 +224,6 @@ const TeamMemberCard = ({
 // ==========================================
 
 const About = () => {
-    // Initialize Webflow scripts and animations
-    useWebflowScripts();
-
     return (
         <div className="page-wrapper">
             <main className="main-wrapper">
@@ -244,18 +234,12 @@ const About = () => {
                             <div className="header_component">
                                 <div className="header_content">
                                     <h1 className="home-header_title">
-                                        <div className="display-inline">
-                                            Elevating Brands with<span className="br"> </span>
-                                        </div>
-                                        <div className="display-inline text-style-secondary-font">
-                                            UX/UI &amp; Identity Design
-                                        </div>
+                                        <div className="display-inline">Who We Are –<span className="br"> </span></div>
+                                        <div className="display-inline text-style-secondary-font">The Collective</div>
                                     </h1>
                                     <div className="home-header_content-inner display-vertical is-left">
                                         <p className="header-text text-size-large">
-                                            We turn your vision into reality with business-focused UX/UI
-                                            and brand-identity designs, helping startups and brands craft
-                                            unforgettable experiences with lasting impact
+                                            Four minds. One mission. Unlimited access. We're not your typical business development team. We're Wasel — the bridge between ambition and achievement.
                                         </p>
                                     </div>
                                 </div>
@@ -263,7 +247,7 @@ const About = () => {
                                     <img
                                         className="cover-image"
                                         src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b45853da2cccf3e5aa1767_about-hero-high-quality.jpg"
-                                        alt="Omotive"
+                                        alt="Wasel Team"
                                         width={1290}
                                         height={644}
                                         loading="eager"
@@ -282,14 +266,14 @@ const About = () => {
                         <div className="container-large">
                             <div className="header_content">
                                 <h2 className="section_title heading-style-h1">
-                                    Turning Ideas into<span className="br"></span>Successful business
+                                    Turning Access into<span className="br"></span>Strategic Partnerships
                                     <span className="br"> </span>
-                                    <span className="text-style-secondary-font">that drive</span> ROI
+                                    <span className="text-style-secondary-font">that unlock</span> Growth
                                 </h2>
                                 <p className="section-text text-size-large">
-                                    We specialize in turning innovative ideas into thriving businesses
-                                    with exceptional UX/UI and brand-identity design. We craft
-                                    user-centered experiences that captivate and strengthen brands
+                                    We specialize in turning market entry challenges into executed opportunities
+                                    with exceptional government relations and strategic access. We craft
+                                    connection-driven strategies that unlock doors and accelerate regional expansion
                                 </p>
                             </div>
                             <div className="experiance_grid">
@@ -316,16 +300,16 @@ const About = () => {
                                         </h2>
                                     </div>
                                     <p className="operation_text text-size-large">
-                                        We help businesses thrive by transforming their digital presence
-                                        with purposeful design. Whether you're a startup or an
-                                        established brand, we specialize in creating websites, intuitive
-                                        interfaces, and brand identities that drive real growth.
+                                        We help businesses expand by unlocking their access to MENA markets
+                                        through strategic relationships. Whether you're a multinational or a
+                                        regional player, we specialize in opening doors, navigating regulations,
+                                        and facilitating partnerships that drive real market penetration.
                                         <br />
                                         <br />
-                                        We focus on solutions that deliver results—boosting engagement,
-                                        increasing conversions, and driving ROI. By combining strategic
-                                        UX/UI design and brand development, we bring your vision to life
-                                        and strengthen your market position.
+                                        We focus on execution that delivers results—securing ministerial meetings,
+                                        accelerating approvals, and closing strategic deals. By combining government
+                                        relations expertise and business development acumen, we bring your expansion
+                                        vision to life and strengthen your competitive position.
                                     </p>
                                     <div className="margin-top margin-large">
                                         <div
@@ -342,7 +326,7 @@ const About = () => {
                                                 href="/projects"
                                                 className="button is-small w-inline-block"
                                             >
-                                                <div className="button-text">View all project</div>
+                                                <div className="button-text">View all deals</div>
                                                 <div
                                                     className="button-hover-bg"
                                                     style={{
@@ -378,7 +362,7 @@ const About = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Our <span className="text-style-secondary-font">Core Values</span>
+                                    Our <span className="text-style-secondary-font">Core Principles</span>
                                 </h2>
                             </div>
                             <div className="core-value_gird">
@@ -401,17 +385,17 @@ const About = () => {
                         <div className="container-large">
                             <div className="header_content">
                                 <h2 className="section_title heading-style-h1 text-color-alternate">
-                                    Proven Work Process&nbsp;&nbsp;for
+                                    Proven Execution Framework&nbsp;&nbsp;for
                                     <span className="br hide-mobile-portrait"> </span>
                                     <span className="text-style-secondary-font">
-                                        Delivering Exceptional
+                                        Delivering Strategic
                                     </span>
                                     <span className="br hide-mobile-portrait"> </span>
-                                    <span className="text-style-secondary-font">Results</span>
+                                    <span className="text-style-secondary-font">Market Access</span>
                                 </h2>
                                 <p className="section-text text-color-alternate">
-                                    Our streamlined work process ensures exceptional results, focusing
-                                    on efficiency, collaboration, and quality at every step
+                                    Our systematic execution framework ensures strategic outcomes, focusing
+                                    on access, momentum, and measurable results at every stage
                                 </p>
                             </div>
                             <div className="process_item_grid">
@@ -443,7 +427,7 @@ const About = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Behind the <span className="text-style-secondary-font">Magic</span>
+                                    Behind the <span className="text-style-secondary-font">Network</span>
                                 </h2>
                             </div>
                             <div className="team-member_grid">

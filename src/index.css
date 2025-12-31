@@ -7741,3 +7741,7 @@ visibility: visible;
 .testimonial-card:is(:hover) .testimonial_card-content {
     grid-template-columns: 1fr;
 }
+
+.nav_logo {
+    width: 70px;
+}

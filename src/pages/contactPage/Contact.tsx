@@ -1,68 +1,67 @@
 import React, { useEffect, useRef } from 'react';
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
 
 // Data Configurations
 const TESTIMONIALS = [
     {
         id: 1,
-        name: 'Nuseir Yassin',
-        position: 'Founder & CEO at Nas Company',
+        name: 'Sarah Al-Mansouri',
+        position: 'CEO, MedTech Solutions MENA',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b2fb3d53859433ab0046c6_nuseir-yassin.png',
         thumbImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bda4143cdb248a8ea2fe9c_user-testimonial-1.png',
-        text: "Omotive design agency took the time to understand my industry. They knew what our visitors wanted, and they did an exceptional job to meet those needs. We've seen great improvements in impression and conversion after the redesign. I vouch for them!",
+        text: "Wasel EBDS opened doors we couldn't access for years. Within 48 hours, we had ministerial meetings scheduled. Their network across MENA healthcare institutions is unmatched. They don't just connect—they deliver results.",
         width: 36,
         height: 36
     },
     {
         id: 2,
-        name: 'Rahat Ahmed',
-        position: 'Founding CEO, Anchorless Bangladesh',
+        name: 'Michael Chen',
+        position: 'Regional Director, GlobalTech Ventures',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bda4143cdb248a8ea2fe9f_user-testimonial-2.png',
         thumbImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bda4143cdb248a8ea2fe9f_user-testimonial-2.png',
-        text: 'Was a pleasure working with Omotive on launching ExitStack.  They understood the vision and worked efficiently, with great communications, to execute it.  Looking forward to working with them again!',
+        text: 'Working with Wasel on our Egypt market entry was transformative. They understood the regulatory landscape perfectly and executed with precision. What would\'ve taken us 18 months took 3 weeks. Exceptional value.',
         width: 36,
         height: 36
     },
     {
         id: 3,
-        name: 'Danny Manu',
-        position: 'Founder & CEO, Mymanu',
+        name: 'Dr. Ahmed Khalil',
+        position: 'Managing Partner, Gulf Ventures Capital',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bda4143cdb248a8ea2fea4_user-testimonial-3.png',
         thumbImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bda4143cdb248a8ea2fea4_user-testimonial-3.png',
-        text: "Omotive's expertise to detail made the Mymanu Airbuds interface innovative and user-friendly. Their understanding of our vision and commitment to human-centered design exceeded our expectations. I highly recommend Omotive for their creativity, technical skill, and user-focused approach. We look forward to future collaborations.",
+        text: "Wasel's ability to navigate government relationships is extraordinary. They facilitated our licensing process with the Ministry of Investment and connected us with strategic partners. Their expertise in MENA business development is world-class. Highly recommend for serious market entry.",
         width: 70,
         height: 70
     },
     {
         id: 4,
-        name: 'Damien Harris',
-        position: 'Enterprise Technology at Bloomberg L.P',
+        name: 'Layla Mahmoud',
+        position: 'Director of Business Development, Regional Pharmaceuticals',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bda4143cdb248a8ea2fea1_user-testimonial-4.png',
         thumbImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bda4143cdb248a8ea2fea1_user-testimonial-4.png',
-        text: 'Mufidul is an exceptional product designer with passion to make something very unique. Through working with him we developed a great friendship. He has a firm grasp for the vision of the project and will take the initiative to see it flourish. I am excited to continue working with him into the future!',
+        text: 'The Wasel team is exceptional at strategic business development with genuine passion for results. Working with them built a lasting partnership. They grasp complex stakeholder dynamics and take initiative to drive success. Excited to continue our collaboration into new markets.',
         width: 70,
         height: 70
     }
 ];
 
 const REVIEW_LOGOS = [
-    { src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bdac8ba112bbfbf20b80f6_clutch-logo-c.svg', alt: 'Clutch Logo' },
-    { src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bdac8b568326871d738810_behance-logo.svg', alt: 'Behance Logo' },
-    { src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bdac8b08e1c7c513781dc9_medium-logo.svg', alt: 'Medium Logo' },
-    { src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bdac8bc99e57b02082b09a_dribbble-logo.svg', alt: 'dribble logo' }
+    { src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bdac8ba112bbfbf20b80f6_clutch-logo-c.svg', alt: 'LinkedIn Network' },
+    { src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bdac8b568326871d738810_behance-logo.svg', alt: 'Government Portal' },
+    { src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bdac8b08e1c7c513781dc9_medium-logo.svg', alt: 'Business Directory' },
+    { src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bdac8bc99e57b02082b09a_dribbble-logo.svg', alt: 'Industry Network' }
 ];
 
 const INTEREST_OPTIONS = [
-    'App from scratch',
-    'Branding',
-    'Website design',
-    'Webflow development'
+    'Government Relations',
+    'Market Entry Support',
+    'Strategic Partnerships',
+    'Deal Facilitation'
 ];
 
 const BUDGET_OPTIONS = [
     '$10K or Below',
-    '$20k-$30k',
-    '$30k-$50k+'
+    '$20k-$50k',
+    '$50k-$100k+'
 ];
 
 // Reusable Components
@@ -152,13 +151,10 @@ const BudgetCheckbox = ({ value }) => (
 );
 
 const Contact = () => {
-    useWebflowScripts();
-
     const navigationSliderRef = useRef(null);
     const contentSliderRef = useRef(null);
 
     useEffect(() => {
-        // Initialize Splide sliders
         if (window.Splide && navigationSliderRef.current && contentSliderRef.current) {
             const navigationSlider = new window.Splide(navigationSliderRef.current, {
                 type: 'loop',
@@ -192,20 +188,18 @@ const Contact = () => {
                     <div className="padding-global padding-section">
                         <div className="container-large">
                             <div className="contact_grid">
-                                {/* Left Side */}
                                 <div className="contact_left display-vertical">
                                     <h1>
-                                        Have a great idea<span className="br"> </span>
-                                        <span className="text-style-secondary-font">Tell us about it.</span>
+                                        Have a market challenge<span className="br"> </span>
+                                        <span className="text-style-secondary-font">Let's unlock it together.</span>
                                     </h1>
 
-                                    {/* Email Copy Section */}
                                     <div>
                                         <div className="margin-bottom margin-small">
-                                            <div className="body-xl text-color-secondary">Just say hello</div>
+                                            <div className="body-xl text-color-secondary">Connect directly</div>
                                         </div>
                                         <a href="#" className="copy-email-wrapper copy-parent w-inline-block">
-                                            <div id="textToCopy2" className="footer_cta_text">mufidul@omotive.co</div>
+                                            <div id="textToCopy2" className="footer_cta_text">contact@waselteam.com</div>
                                             <div className="copy-button is-two display-vertical is-center">
                                                 <CopyIcon />
                                                 <div data-gradient={1} className="copy-button-overlay" />
@@ -216,9 +210,7 @@ const Contact = () => {
                                         </a>
                                     </div>
 
-                                    {/* Testimonial Sliders */}
                                     <div tf-sliders="wrapper" className="client-testimonial-sliders-wrapper">
-                                        {/* Navigation Slider */}
                                         <div className="client-testimonial-navigation-slider-wrapper">
                                             <div
                                                 ref={navigationSliderRef}
@@ -237,7 +229,6 @@ const Contact = () => {
                                             </div>
                                         </div>
 
-                                        {/* Content Slider */}
                                         <div className="client-testimonial-content-slider-wrapper">
                                             <div
                                                 ref={contentSliderRef}
@@ -256,7 +247,6 @@ const Contact = () => {
                                         </div>
                                     </div>
 
-                                    {/* Review Logos */}
                                     <div className="review_logo-wrapper display-flex">
                                         {REVIEW_LOGOS.map((logo, index) => (
                                             <ReviewLogo key={index} {...logo} />
@@ -264,11 +254,9 @@ const Contact = () => {
                                     </div>
                                 </div>
 
-                                {/* Right Side - Contact Form */}
                                 <div id="w-node-a3ba80a6-31fc-eed1-caaa-3754f599e440-05fab082" className="contact_right">
                                     <div className="contact_form-block w-form">
                                         <form id="wf-form-Contact-Form" name="wf-form-Contact-Form" method="get" className="contact_form display-vertical" data-wf-page-id="67bd67370ac28e0c05fab082" data-wf-element-id="249d2cd8-37f7-9057-fe81-0ac00ca0fc61" aria-label="Contact Form">
-                                            {/* Name and Email */}
                                             <div className="contact_form-inner-block display-flex">
                                                 <div className="contact_form_field-wrapper">
                                                     <label htmlFor="name" className="contact_form_lebel body-l text-weight-medium">Name or Company</label>
@@ -280,9 +268,8 @@ const Contact = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Interested In */}
                                             <div className="contact_form-inner-block">
-                                                <label htmlFor="" className="contact_form_lebel">I'm interested in*</label>
+                                                <label htmlFor="" className="contact_form_lebel">I need assistance with*</label>
                                                 <div tf-custom-select-multiple="" tf-custom-select-wrapper="" className="position-relative">
                                                     <select id="Interested-In" name="Interested-In" data-name="Interested In" required multiple tf-custom-select-input="" className="contact_form_hidden-input w-select" tabIndex={-1}>
                                                         <option value="">Select multiple custom option</option>
@@ -298,9 +285,8 @@ const Contact = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Project Budget */}
                                             <div className="contact_form-inner-block">
-                                                <label htmlFor="" className="contact_form_lebel">Project Budget*</label>
+                                                <label htmlFor="" className="contact_form_lebel">Engagement Budget*</label>
                                                 <div tf-custom-select-wrapper="" className="position-relative">
                                                     <input className="contact_form_hidden-input w-input" maxLength={256} name="Project-Budget" data-name="Project Budget" placeholder="Project Budget" tf-custom-select-input="" type="text" id="Project-Budget" required tabIndex={-1} />
                                                     <div className="contact_form_check-wrapper display-flex">
@@ -311,16 +297,14 @@ const Contact = () => {
                                                 </div>
                                             </div>
 
-                                            {/* Project Details */}
                                             <div className="contact_form-inner-block">
-                                                <label htmlFor="Message" className="contact_form_lebel">Project details*</label>
-                                                <textarea placeholder="Write your project details here" maxLength={5000} id="Message" name="Message" data-name="Message" className="contact_form_text_field w-input" defaultValue={""} />
+                                                <label htmlFor="Message" className="contact_form_lebel">Market objectives & challenges*</label>
+                                                <textarea placeholder="Describe your market entry goals and key challenges" maxLength={5000} id="Message" name="Message" data-name="Message" className="contact_form_text_field w-input" defaultValue={""} />
                                             </div>
 
                                             <input type="submit" data-wait="Please wait..." className="contact_form_button w-button" defaultValue="Submit" />
                                         </form>
 
-                                        {/* Success/Error Messages */}
                                         <div className="w-form-done" tabIndex={-1} role="region" aria-label="Contact Form success">
                                             <div>Thank you! Your submission has been received!</div>
                                         </div>

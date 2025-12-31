@@ -1,142 +1,141 @@
 import React, { useEffect, useRef } from 'react';
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
 
 // Data configurations
 const SERVICE_SLIDES = [
-    { id: 1, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e5671cd299e19a24dae_service-slider-3-high.jpg', alt: 'service mockup' },
-    { id: 2, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b5b3236858ebec79732441_service-slider-2-high.jpg', alt: 'service mockup' },
-    { id: 3, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e5671cd299e19a24dae_service-slider-3-high.jpg', alt: 'service mockup' },
-    { id: 4, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e91c8a9cb38c9576b81_service-slider-4-high.jpg', alt: 'service mockup' },
+    { id: 1, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e5671cd299e19a24dae_service-slider-3-high.jpg', alt: 'government relations meeting' },
+    { id: 2, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b5b3236858ebec79732441_service-slider-2-high.jpg', alt: 'strategic partnership signing' },
+    { id: 3, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e5671cd299e19a24dae_service-slider-3-high.jpg', alt: 'ministerial meeting access' },
+    { id: 4, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e91c8a9cb38c9576b81_service-slider-4-high.jpg', alt: 'deal facilitation success' },
     { id: 5, image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b5b3236858ebec79732441_service-slider-2-high.jpg', alt: '' }
 ];
 
 const CORE_SERVICES = [
     {
         id: '01',
-        title: 'Website & Branding',
-        href: '/sevices/service-one',
+        title: 'Government Relations',
+        href: '/services/government-relations',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b1f4e6db0bda26bd26cacd_core-service-1-high.jpg',
-        description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth',
+        description: 'Delivering ministerial access solutions that combine strategic positioning with execution to unlock regulatory pathways',
         linkText: 'View service details',
         isActive: true,
         alt: ''
     },
     {
         id: '02',
-        title: 'Mobile Apps',
-        href: '/sevices/mobile-application-design',
+        title: 'Market Entry Support',
+        href: '/services/market-entry',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706942a9764c6d4d158f2_core-service-mobile-app-low.webp',
         lazyImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d70694bedede1779d8aa3c_core-service-mobile-app-high.jpg',
-        description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth',
+        description: 'Delivering market access solutions that combine local expertise with strategic networks to accelerate MENA expansion',
         linkText: 'See service details',
-        alt: 'mobile app mockup'
+        alt: 'market entry support'
     },
     {
         id: '03',
-        title: 'Web Application',
-        href: '/sevices/web-application',
+        title: 'Strategic Partnerships',
+        href: '/services/strategic-partnerships',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706c08d1c3060ecb941c7_core-service-web-app-low.webp',
         lazyImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706c06561d1219bf28746_core-service-web-app-high.jpg',
-        description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth',
+        description: 'Delivering partnership solutions that combine relationship capital with strategic alignment to create lasting value',
         linkText: 'See service details',
-        alt: 'web app mockup'
+        alt: 'strategic partnership facilitation'
     },
     {
         id: '04',
-        title: 'Webflow Development',
-        href: '/service-two',
+        title: 'Deal Facilitation',
+        href: '/services/deal-facilitation',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706f0f53741a37050423c_core-service-webflow-low.webp',
         lazyImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706f0a79f0c901c03469c_core-service-webflow-high.jpg',
-        description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth',
+        description: 'Delivering closure-focused solutions that combine tactical navigation with momentum management to finalize agreements',
         linkText: 'See service details',
-        alt: 'webflow site mockup'
+        alt: 'deal closure facilitation'
     }
 ];
 
 const APPROACH_CARDS = [
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b475a572811e4459f4e09a_static-design-icon.svg',
-        title: 'Blueprint',
-        text: `We dive deep into your brand, conducting research and analysis to develop blueprints that set you up for increased recognition in today's market`
+        title: 'Intelligence',
+        text: `We dive deep into your objectives, conducting stakeholder mapping and regulatory analysis to develop entry strategies that position you for accelerated market penetration`
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6fe961651407268d79fd8_foundation-icon.svg',
-        title: 'Foundation',
-        text: 'Our team brings your brand to life through intuitive websites and engaging mobile apps, innovation to captivate and keep loyal audiences.'
+        title: 'Access',
+        text: 'Our team opens critical doors through direct ministerial introductions and executive connections, delivering relationships that unlock opportunities and overcome barriers.'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6feaff171efceff6d1921_expansion-icon.svg',
-        title: 'Expansion',
-        text: 'We inspire deeper connection and help you realize lasting measurable results through cross-channel the right message at the right time.'
+        title: 'Execution',
+        text: 'We drive sustainable momentum and help you realize measurable outcomes through continuous follow-up and strategic guidance at the right moment.'
     }
 ];
 
 const PROCESS_STEPS = [
     {
         num: '001',
-        title: 'Identify Your Business Challenges',
-        text: 'Identify key challenges and create tailored solutions to drive your business forward',
+        title: 'Identify Your Market Objectives',
+        text: 'Identify key access challenges and create tailored engagement strategies to accelerate your expansion',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b577a45d72d1df495cccb0_business-step-icon.svg'
     },
     {
         num: '002',
-        title: 'Discover Effective Solutions',
-        text: 'Find tailored solutions to solve your challenges and boost your business growth',
+        title: 'Map Strategic Stakeholders',
+        text: 'Map critical decision-makers and regulatory pathways to unlock your market opportunities',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b577a45d72d1df495cccb0_business-step-icon.svg'
     },
     {
         num: '003',
-        title: 'Mix Your Hope & Our Creativity',
-        text: 'Combining your vision with our creativity to deliver outstanding results',
+        title: 'Leverage Our Network & Your Vision',
+        text: 'Combining your objectives with our connections to unlock high-impact opportunities',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6c71abf8541d7489f64b3_handshake-icon.svg'
     },
     {
         num: '004',
-        title: 'Deliver Outstanding Result',
-        text: 'Delivering high-quality results that exceed expectations and drive success',
+        title: 'Execute Deal Closure',
+        text: 'Delivering strategic outcomes that exceed expectations and unlock sustainable growth',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b57a72027be6ac0c422f7f_result-sheet-icon.svg'
     }
 ];
 
 const TESTIMONIALS_GROUP_1 = [
     {
-        name: 'Nuseir Yassin',
-        position: 'Founder & CEO at Nas Company',
+        name: 'Sarah Al-Mansouri',
+        position: 'CEO, MedTech Solutions MENA',
         img: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b2fb3d53859433ab0046c6_nuseir-yassin.png',
-        text: 'Omotive Design Agency did an outstanding job designing the websites for Nassummit, Nashouse, Nastravel, and Nasdaily. The sites are intuitive, visually engaging, and perfectly aligned with our brand. Highly recommend!'
+        text: 'Wasel EBDS opened doors we couldn\'t access for years. Within 48 hours, we had ministerial meetings scheduled. Their network across MENA healthcare institutions is unmatched. They don\'t just connect—they deliver results.'
     },
     {
-        name: 'Rahat Ahmed',
-        position: 'Founding CEO, Anchorless Bangladesh',
+        name: 'Michael Chen',
+        position: 'Regional Director, GlobalTech Ventures',
         img: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b306fbc1a90c60620ce1b6_Rahat%20Ahmed.png',
-        text: 'Was a pleasure working with Omotive on launching ExitStack. They understood the vision and worked efficiently, with great communications, to execute it. Looking forward to working with them again!'
+        text: 'Working with Wasel on our Egypt market entry was transformative. They understood the regulatory landscape perfectly and executed with precision. What would\'ve taken us 18 months took 3 weeks. Exceptional value.'
     },
     {
-        name: 'Danny Manu',
-        position: 'Founder & CEO, mymanu',
+        name: 'Dr. Ahmed Khalil',
+        position: 'Managing Partner, Gulf Ventures Capital',
         img: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b3073e37c5fce4f02305c9_danny-menu.png',
-        text: "Omotive's expertise to detail made the Mymanu Airbuds interface innovative and user-friendly. Their understanding of our vision and commitment to human-centered design exceeded our expectations. I highly recommend Omotive for their creativity, technical skill, and user-focused approach."
+        text: "Wasel's ability to navigate government relationships is extraordinary. They facilitated our licensing process with the Ministry of Investment and connected us with strategic partners. Their expertise in MENA business development is world-class."
     }
 ];
 
 const TESTIMONIALS_GROUP_2 = [
     {
-        name: 'Arifur Rahaman',
-        position: 'CEO at ReviewXpo',
+        name: 'Fatima Hassan',
+        position: 'VP of Strategy, Infrastructure Holdings',
         img: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4211329b6fc32d099d2b1_arifur-rahaman.png',
-        text: "Omotive design agency took the time to understand my industry. They knew what our visitors wanted, and they did an exceptional job to meet those needs. We've seen great improvements in impression and conversion after the redesign. I vouch for them!"
+        text: "Wasel took time to understand our industry challenges. They knew exactly who we needed to meet and delivered those connections flawlessly. We've seen tremendous traction in government contracts after their strategic intervention. I vouch for them completely."
     },
     {
-        name: 'Ishti Alam',
-        position: 'Investments at Anchorless Bangladesh',
+        name: 'Omar Rashid',
+        position: 'Chief Commercial Officer, Energy Solutions',
         img: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42131553bf680ce6418b6_Ishti-alam.png',
-        text: 'Omotive has a structured process for UI/UX design. Their human centered design approach the key for us to collaborate. They delivered on their promises very well and was open to constructive feedback. Our project came out according to our expectations and I would recommend them for web design.'
+        text: 'Wasel has a structured approach to government relations. Their execution-first methodology was key for us. They delivered on commitments ahead of schedule and remained responsive throughout. Our partnership expansion exceeded expectations.'
     },
     {
-        name: 'Damien Harris',
-        position: 'Enterprise Technology at Bloomberg L.P',
+        name: 'Layla Mahmoud',
+        position: 'Director of Business Development, Regional Pharmaceuticals',
         img: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67cfe710ff85e927f4fb2fa3_damien-haris.png',
-        text: 'Mufidul is an exceptional product designer with passion to make something very unique. Through working with him we developed a great friendship. He has a firm grasp for the vision of the project and will take the initiative to see it flourish. I am excited to continue working with him into the future!'
+        text: 'The Wasel team is exceptional at strategic business development with genuine passion for results. Working with them built a lasting partnership. They grasp complex stakeholder dynamics and take initiative to drive success.'
     }
 ];
 
@@ -270,7 +269,7 @@ const ProcessStep = ({ step }) => (
                         href="/projects"
                         className="button is-small w-inline-block is-gradient"
                     >
-                        <div className="button-text">View all project</div>
+                        <div className="button-text">View all deals</div>
                         <div
                             className="button-hover-bg"
                             style={{
@@ -310,8 +309,6 @@ const TestimonialCard = ({ testimonial }) => (
 );
 
 const Services = () => {
-    useWebflowScripts();
-
     const serviceSwiperRef = useRef(null);
     const testimonialSwiper1Ref = useRef(null);
     const testimonialSwiper2Ref = useRef(null);
@@ -361,16 +358,16 @@ const Services = () => {
                                 <div className="header_content">
                                     <h1 className="home-header_title">
                                         <div className="display-inline">
-                                            Elevating Brands<span className="br"> </span>with{" "}
+                                            Unlocking Markets<span className="br"> </span>with{" "}
                                         </div>
                                         <div className="display-inline text-style-secondary-font">
-                                            UX/UI &amp; Identity Design
+                                            Strategic Access &amp; Execution
                                         </div>
                                     </h1>
                                     <div className="home-header_content-inner display-vertical is-left">
                                         <p className="header-text text-size-large">
-                                            We elevate user experiences and drive business growth with
-                                            personalized, impactful solutions
+                                            We unlock critical access and drive market expansion with
+                                            strategic connections and proven execution
                                         </p>
                                     </div>
                                 </div>
@@ -392,7 +389,7 @@ const Services = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Core <span className="text-style-secondary-font">Services</span>
+                                    Core <span className="text-style-secondary-font">Solutions</span>
                                 </h2>
                             </div>
                             <div className="core-service_grid">
@@ -423,7 +420,7 @@ const Services = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Our <span className="text-style-secondary-font">approach</span>
+                                    Our <span className="text-style-secondary-font">methodology</span>
                                 </h2>
                             </div>
                             <div className="core-value_gird">
@@ -440,15 +437,15 @@ const Services = () => {
                         <div className="container-large">
                             <div className="header_content">
                                 <h2 className="section_title heading-style-h1 text-color-alternate">
-                                    Proven Work Process&nbsp;&nbsp;for
+                                    Proven Execution Framework&nbsp;&nbsp;for
                                     <span className="br hide-mobile-portrait"> </span>
-                                    <span className="text-style-secondary-font">Delivering Exceptional</span>
+                                    <span className="text-style-secondary-font">Delivering Strategic</span>
                                     <span className="br hide-mobile-portrait"> </span>
-                                    <span className="text-style-secondary-font">Results</span>
+                                    <span className="text-style-secondary-font">Market Access</span>
                                 </h2>
                                 <p className="section-text text-color-alternate">
-                                    Our streamlined work process ensures exceptional results, focusing
-                                    on efficiency, collaboration, and quality at every step
+                                    Our systematic execution framework ensures strategic outcomes, focusing
+                                    on access, momentum, and measurable results at every stage
                                 </p>
                             </div>
                             <div className="process_item_grid">
@@ -473,7 +470,7 @@ const Services = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Loved by <span className="text-style-secondary-font">Hundreds</span>
+                                    Trusted by <span className="text-style-secondary-font">Industry Leaders</span>
                                 </h2>
                             </div>
                             <div className="testimonail_grid">

@@ -1,4 +1,4 @@
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
+import React from 'react';
 
 // Data Configurations
 const NAV_ITEMS = [
@@ -8,32 +8,32 @@ const NAV_ITEMS = [
 const SERVICES = [
     {
         id: '01',
-        title: 'Website & Branding',
-        href: '/sevices/service-one',
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67adfa1f0bf9c103b13afa27_dropdown-service.jpg',
-        description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth',
+        title: 'Government Relations',
+        href: '/services/government-relations',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b1f4e6db0bda26bd26cacd_core-service-1-high.jpg',
+        description: 'Delivering ministerial access solutions that combine strategic positioning with execution to unlock regulatory pathways',
         isActive: true
     },
     {
         id: '02',
-        title: 'Mobile Apps',
-        href: '/sevices/mobile-application-design',
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d705308d1c3060ecb7eb16_dropdown-Mobile%20Apps.jpg',
-        description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth'
+        title: 'Market Entry Support',
+        href: '/services/market-entry',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d70694bedede1779d8aa3c_core-service-mobile-app-high.jpg',
+        description: 'Delivering market access solutions that combine local expertise with strategic networks to accelerate MENA expansion'
     },
     {
         id: '03',
-        title: 'Web Application',
-        href: '/sevices/web-application',
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d70549c5c4b283a4831d4e_dropdown-web-application.jpg',
-        description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth'
+        title: 'Strategic Partnerships',
+        href: '/services/strategic-partnerships',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706c06561d1219bf28746_core-service-web-app-high.jpg',
+        description: 'Delivering partnership solutions that combine relationship capital with strategic alignment to create lasting value'
     },
     {
         id: '04',
-        title: 'Webflow Development',
-        href: '/service-two',
-        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d7054ab1eecae2159d6173_dropdown-webflow.jpg',
-        description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth'
+        title: 'Deal Facilitation',
+        href: '/services/deal-facilitation',
+        image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706f0a79f0c901c03469c_core-service-webflow-high.jpg',
+        description: 'Delivering closure-focused solutions that combine tactical navigation with momentum management to finalize agreements'
     }
 ];
 
@@ -44,9 +44,9 @@ const MOBILE_MENU_ITEMS = [
 ];
 
 const SOCIAL_LINKS = [
-    { label: 'Dribble', href: 'https://dribbble.com/designopsagency' },
-    { label: 'Behance', href: 'https://www.behance.net/designopsagency' },
-    { label: 'Linkedin', href: 'https://www.linkedin.com/company/omotive-agency/?viewAsMember=true' }
+    { label: 'Linkedin', href: 'https://www.linkedin.com/company/wasel-ebds' },
+    { label: 'Twitter', href: 'https://twitter.com/waselebds' },
+    { label: 'Email', href: 'mailto:contact@waselebds.com' }
 ];
 
 // Reusable Components
@@ -64,7 +64,7 @@ const CopyIcon = () => (
 );
 
 const ServiceListItem = ({ service }) => (
-    <a role="listtiem" href={service.href} className={`nav_services_list-item w-inline-block${service.isActive ? ' is-active' : ''}`} tabIndex={0}>
+    <a role="listitem" href={service.href} className={`nav_services_list-item w-inline-block${service.isActive ? ' is-active' : ''}`} tabIndex={0}>
         <div>{service.id}</div>
         <div>{service.title}</div>
     </a>
@@ -95,14 +95,12 @@ const MobileMenuItem = ({ item }) => (
 );
 
 const SocialLink = ({ link }) => (
-    <a href={link.href} target="_blank" className="mobile-menu_social_link w-inline-block">
+    <a href={link.href} target="_blank" rel="noopener noreferrer" className="mobile-menu_social_link w-inline-block">
         <div>{link.label}</div>
     </a>
 );
 
 const Nav = () => {
-    useWebflowScripts();
-
     return (
         <nav className="nav_component">
             <div className="padding-global">
@@ -110,7 +108,7 @@ const Nav = () => {
                     <div className="nav_wrapper">
                         {/* Logo */}
                         <a href="/" aria-current="page" className="nav_logo-link w-inline-block w--current">
-                            <img src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67ac925dc3a152594b6bcc01_logo.svg" loading="eager" width={124} height={28} alt="Omotive Logo" className="nav_logo" />
+                            <img src="https://ik.imagekit.io/ihhlj9kpd/Untitled-1.png" loading="eager" width={124} height={28} alt="Wasel EBDS Logo" className="nav_logo" />
                         </a>
 
                         {/* Desktop Menu */}
@@ -176,7 +174,7 @@ const Nav = () => {
                             {/* Contact Button */}
                             <div className="nav_button is-magnatic" style={{ willChange: 'transform', transform: 'translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}>
                                 <a data-w-id="8bb02b6a-0dfa-c39d-4ebf-2f7056810763" href="/contact" className="button is-small w-inline-block is-small">
-                                    <div className="button-text">Let's chat</div>
+                                    <div className="button-text">Let's connect</div>
                                     <div className="button-hover-bg" style={{ transform: 'translate3d(0px, 130%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)', transformStyle: 'preserve-3d' }}></div>
                                 </a>
                             </div>
@@ -216,7 +214,7 @@ const Nav = () => {
                                 <div className="body-xl text-color-secondary">Get in touch</div>
                             </div>
                             <a href="#" className="copy-email-wrapper copy-parent is-mobile w-inline-block">
-                                <div id="textToCopy" className="footer_cta_text">mufidul@omotive.co</div>
+                                <div id="textToCopy" className="footer_cta_text">contact@waselebds.com</div>
                                 <div className="copy-button is-two display-vertical is-center">
                                     <CopyIcon />
                                     <div data-gradient={1} className="copy-button-overlay" />
@@ -229,7 +227,7 @@ const Nav = () => {
 
                         {/* Social Links */}
                         <div className="mobile-menu_social display-vertical">
-                            <div className="heading-style-h3">Socials</div>
+                            <div className="heading-style-h3">Connect</div>
                             <div className="mobile-menu_social_links display-flex is-left">
                                 {SOCIAL_LINKS.map((link, index) => (
                                     <SocialLink key={index} link={link} />

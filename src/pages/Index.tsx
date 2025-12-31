@@ -1,6 +1,4 @@
 import React from 'react';
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
-
 
 // ============================================================
 // DATA CONFIGURATIONS
@@ -13,11 +11,11 @@ const CLIENT_LOGOS = [
   },
   {
     src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b429026535397fbda12509_mymenu-logo.svg',
-    alt: 'My Menu logo'
+    alt: 'Altris AI logo'
   },
   {
     src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4291146efe5712ec684cf_nasdaily-logo.svg',
-    alt: 'Nasdaily logo'
+    alt: 'Healthcare Ministry logo'
   },
   {
     src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/682f12e3eb736dc8ba34f988_exitstack-logo.svg',
@@ -25,53 +23,53 @@ const CLIENT_LOGOS = [
   },
   {
     src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4296a18fbfc438e57163f_nastravel-logo.svg',
-    alt: 'Nastravel Logo'
+    alt: 'Investment Authority Logo'
   },
   {
     src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42978d5f25f6f99420436_reviewxpo-logo.svg',
-    alt: 'Reviewxpo logo'
+    alt: 'Enterprise Partners logo'
   },
   {
     src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42988a54127b5b18d2668_nassummit-log.svg',
-    alt: 'nassummit logo'
+    alt: 'Strategic Ventures logo'
   }
 ];
 
 const HOME_PROJECTS = [
   {
-    href: '/projects/omoskillo',
+    href: '/projects/altris-ai',
     imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b08fea00250a4417c8fe10_Omoskillo-website-mockup-low.webp',
     imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b08feb2550411c49ff62b2_Omoskillo-website-mockup-high.jpg',
-    alt: 'omoskillo website mockup',
-    title: 'Omoskillo',
-    subtitle: 'Website design',
+    alt: 'altris ai government partnership',
+    title: 'Altris AI',
+    subtitle: 'MENA Healthcare Expansion',
     isNegative: false
   },
   {
-    href: '/projects/omostate',
+    href: '/projects/fintech-licensing',
     imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b096e2d2812e66e167f5ae_omostate-application-mockup-low.webp',
     imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b096e2eca50e5956c77842_omostate-application-mockup-high.jpg',
-    alt: 'omoskillo website mockup',
-    title: 'Omostate Real estate',
-    subtitle: 'Application design',
+    alt: 'fintech regulatory approval',
+    title: 'FinTech Licensing',
+    subtitle: 'Ministry Access & Approval',
     isNegative: true
   },
   {
-    href: '/projects/omoskillo',
+    href: '/projects/manufacturing-deal',
     imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b0976a39cf14b1edd4a611_omoskillo-app-design-mockup-low.webp',
     imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b0976bc569e1e4c9944a00_omoskillo-app-design-mockup-high.jpg',
-    alt: 'omoskillo website mockup',
-    title: 'Omoskillo E-learning',
-    subtitle: 'App design',
+    alt: 'manufacturing partnership deal',
+    title: 'Manufacturing Partnership',
+    subtitle: 'Strategic Deal Closure',
     isNegative: false
   },
   {
     href: '#',
     imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b097fd5aa2c7918f1a89d0_mymenu-clickpro-mockup-low.webp',
     imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b097fda3b03ecab8bdce3b_mymenu-clickpro-mockup-high.jpg',
-    alt: 'omoskillo website mockup',
-    title: 'Mymanu clikpro',
-    subtitle: 'Product design',
+    alt: 'government tender success',
+    title: 'Government Tender',
+    subtitle: 'Procurement Victory',
     isNegative: false
   }
 ];
@@ -79,40 +77,40 @@ const HOME_PROJECTS = [
 const CORE_SERVICES = [
   {
     number: '01',
-    title: 'Website & Branding',
-    href: '/sevices/service-one',
+    title: 'Government Relations',
+    href: '/services/government-relations',
     isActive: true,
-    description: 'Experience <strong>responsive web design</strong>, <strong>custom branding packages</strong>, and<strong>user-centric website development</strong> tailored to your business goals.',
+    description: 'Experience <strong>ministerial-level access</strong>, <strong>regulatory navigation</strong>, and <strong>policy influence</strong> tailored to your expansion goals.',
     imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b1f4e6d7d4e41d3a380f52_core-service-1-low.webp',
     imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b1f4e6db0bda26bd26cacd_core-service-1-high.jpg',
     dataWId: '8b01261a-02a7-00c6-a0f5-03418c16637e'
   },
   {
     number: '02',
-    title: 'Mobile Apps',
-    href: '/sevices/mobile-application-design',
+    title: 'Market Entry Support',
+    href: '/services/market-entry',
     isActive: false,
-    description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth',
+    description: 'Delivering strategic access solutions that combine insider knowledge with execution to accelerate your MENA presence',
     imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706942a9764c6d4d158f2_core-service-mobile-app-low.webp',
     imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d70694bedede1779d8aa3c_core-service-mobile-app-high.jpg',
     dataWId: '74b1622e-a2d0-bbf4-0006-e83ceba3ac0f'
   },
   {
     number: '03',
-    title: 'Web Application',
-    href: '/sevices/web-application',
+    title: 'Strategic Partnerships',
+    href: '/services/strategic-partnerships',
     isActive: false,
-    description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth',
+    description: 'Delivering high-impact connections that combine relationship capital with strategic alignment to unlock growth',
     imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706c08d1c3060ecb941c7_core-service-web-app-low.webp',
     imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706c06561d1219bf28746_core-service-web-app-high.jpg',
     dataWId: 'c364578e-4cd2-13a0-0ff5-fee5181e4bb7'
   },
   {
     number: '04',
-    title: 'Webflow Developement',
-    href: '/service-two',
+    title: 'Deal Facilitation',
+    href: '/services/deal-facilitation',
     isActive: false,
-    description: 'Delivering user-centric solutions that combine creativity with strategy to drive business growth',
+    description: 'Delivering execution-focused solutions that combine tactical navigation with strategic momentum to close deals',
     imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706f0f53741a37050423c_core-service-webflow-low.webp',
     imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d706f0a79f0c901c03469c_core-service-webflow-high.jpg',
     dataWId: '4376dfb3-2db8-372e-be2f-c27aa1f8389c'
@@ -121,54 +119,54 @@ const CORE_SERVICES = [
 
 const TESTIMONIALS_SET_1 = [
   {
-    text: "Omotive Design Agency did an outstanding job designing the websites for Nassummit, Nashouse, Nastravel, and Nasdaily. The sites are intuitive, visually engaging, and perfectly aligned with our brand. Highly recommend!",
+    text: "Wasel EBDS opened doors we couldn't access for years. Within 48 hours, we had ministerial meetings scheduled. Their network across MENA healthcare institutions is unmatched. They don't just connect—they deliver results.",
     authorImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b2fb3d53859433ab0046c6_nuseir-yassin.png',
-    authorName: 'Nuseir Yassin',
-    authorDesignation: 'Founder & CEO at Nas Company',
-    authorAlt: 'Nasir Yassin',
+    authorName: 'Sarah Al-Mansouri',
+    authorDesignation: 'CEO, MedTech Solutions MENA',
+    authorAlt: 'Sarah Al-Mansouri',
     swiperClass: 'swiper-slide-active'
   },
   {
-    text: "Was a pleasure working with Omotive on launching ExitStack.  They understood the vision and worked efficiently, with great communications, to execute it.  Looking forward to working with them again!",
+    text: "Working with Wasel on our Egypt market entry was transformative. They understood the regulatory landscape perfectly and executed with precision. What would've taken us 18 months took 3 weeks. Exceptional value.",
     authorImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b306fbc1a90c60620ce1b6_Rahat%20Ahmed.png',
-    authorName: 'Rahat Ahmed',
-    authorDesignation: 'Founding CEO, Anchorless Bangladesh',
-    authorAlt: 'Rahat Ahamed',
+    authorName: 'Michael Chen',
+    authorDesignation: 'Regional Director, GlobalTech Ventures',
+    authorAlt: 'Michael Chen',
     swiperClass: 'swiper-slide-next'
   },
   {
-    text: "Omotive's expertise to detail made the Mymanu Airbuds interface innovative and user-friendly. Their understanding of our vision and commitment to human-centered design exceeded our expectations. I highly recommend Omotive for their creativity, technical skill, and user-focused approach. We look forward to future collaborations.",
+    text: "Wasel's ability to navigate government relationships is extraordinary. They facilitated our licensing process with the Ministry of Investment and connected us with strategic partners. Their expertise in MENA business development is world-class. Highly recommend for serious market entry.",
     authorImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b3073e37c5fce4f02305c9_danny-menu.png',
-    authorName: 'Danny Manu',
-    authorDesignation: 'Founder & CEO, mymanu',
-    authorAlt: 'Danny Menu',
+    authorName: 'Dr. Ahmed Khalil',
+    authorDesignation: 'Managing Partner, Gulf Ventures Capital',
+    authorAlt: 'Dr. Ahmed Khalil',
     swiperClass: ''
   }
 ];
 
 const TESTIMONIALS_SET_2 = [
   {
-    text: "Omotive design agency took the time to understand my industry. They knew what our visitors wanted, and they did an exceptional job to meet those needs. We've seen great improvements in impression and conversion after the redesign. I vouch for them!",
+    text: "Wasel took time to understand our industry challenges. They knew exactly who we needed to meet and delivered those connections flawlessly. We've seen tremendous traction in government contracts after their strategic intervention. I vouch for them completely.",
     authorImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4211329b6fc32d099d2b1_arifur-rahaman.png',
-    authorName: 'Arifur Rahaman',
-    authorDesignation: 'CEO at ReviewXpo',
-    authorAlt: 'arifur rahaman ',
+    authorName: 'Fatima Hassan',
+    authorDesignation: 'VP of Strategy, Infrastructure Holdings',
+    authorAlt: 'Fatima Hassan',
     swiperClass: 'swiper-slide-active'
   },
   {
-    text: "Omotive has a structured process for UI/UX design. Their human centered design approach the key for us to collaborate. They delivered on their promises very well and was open to constructive feedback. Our project came out according to our expectations and I would recommend them for web design.",
+    text: "Wasel has a structured approach to government relations. Their execution-first methodology was key for us. They delivered on commitments ahead of schedule and remained responsive throughout. Our partnership expansion exceeded expectations and I recommend them for strategic market access.",
     authorImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42131553bf680ce6418b6_Ishti-alam.png',
-    authorName: 'Ishti Alam',
-    authorDesignation: 'Investments at Anchorless Bangladesh',
-    authorAlt: 'Ishti Alam',
+    authorName: 'Omar Rashid',
+    authorDesignation: 'Chief Commercial Officer, Energy Solutions',
+    authorAlt: 'Omar Rashid',
     swiperClass: 'swiper-slide-next'
   },
   {
-    text: "Mufidul is an exceptional product designer with passion to make something very unique. Through working with him we developed a great friendship. He has a firm grasp for the vision of the project and will take the initiative to see it flourish. I am excited to continue working with him into the future!",
+    text: "The Wasel team is exceptional at strategic business development with genuine passion for results. Working with them built a lasting partnership. They grasp complex stakeholder dynamics and take initiative to drive success. Excited to continue our collaboration into new markets.",
     authorImage: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67cfe710ff85e927f4fb2fa3_damien-haris.png',
-    authorName: 'Damien Harris',
-    authorDesignation: 'Enterprise Technology at Bloomberg L.P',
-    authorAlt: '',
+    authorName: 'Layla Mahmoud',
+    authorDesignation: 'Director of Business Development, Regional Pharmaceuticals',
+    authorAlt: 'Layla Mahmoud',
     swiperClass: ''
   }
 ];
@@ -354,9 +352,9 @@ const Index = () => {
                 <div className="header_content">
                   <div className="header_content_right">
                     <div className="clutch-badge">
-                      <div>5.0 rating on</div>
+                      <div>Strategic Excellence in</div>
                       <a
-                        href="https://clutch.co/profile/omotive#highlights"
+                        href="#"
                         target="_blank"
                         className="clutch-link w-inline-block"
                       >
@@ -365,23 +363,23 @@ const Index = () => {
                           loading="eager"
                           width={50}
                           height={14}
-                          alt="clutch icon"
+                          alt="mena region"
                         />
                       </a>
                     </div>
                     <h1 className="home-header_title">
                       <div className="display-inline">
-                        AI+UI Design Services<span className="br"> </span>to
+                        Government Relations<span className="br"> </span>to
                       </div>
                       <div className="display-inline text-style-secondary-font">
-                        <span> </span>grow your business
+                        <span> </span>unlock your market
                       </div>
                     </h1>
                   </div>
                   <div className="home-header_content-inner display-vertical is-left">
                     <p className="text-size-large">
-                      Struggling to turn design into revenue? <br />
-                      We craft UI/UX solutions that deliver millions in business growth.
+                      Struggling to access decision-makers in MENA? <br />
+                      We open doors that deliver millions in deal closures and market expansion.
                     </p>
                     <div
                       className="is-magnatic"
@@ -396,7 +394,7 @@ const Index = () => {
                         href="/book-a-call"
                         className="button is-small w-inline-block is-gradient"
                       >
-                        <div className="button-text">Book a free call</div>
+                        <div className="button-text">Book a strategy call</div>
                         <div
                           className="button-hover-bg"
                           style={{
@@ -420,18 +418,18 @@ const Index = () => {
                       loop={true}
                       muted={true}
                       playsInline={true}
-                      poster="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/68e738b4941759e4f6bbd513_Screenshot%202025-10-09%20at%2012.22.24%E2%80%AFAM.avif"
+                      poster="https://ik.imagekit.io/ihhlj9kpd/580571850_947569991030788_1390615124700868290_n.jpg"
                       className="cover-image"
                     >
                       <source
-                        data-src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/68e94d717e0e3c2bd466c76f_banner-showreel.webm"
+                        data-src="https://ik.imagekit.io/ihhlj9kpd/580571850_947569991030788_1390615124700868290_n.jpg"
                         type="video/webm"
-                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/68e94d717e0e3c2bd466c76f_banner-showreel.webm"
+                        src="https://ik.imagekit.io/ihhlj9kpd/580571850_947569991030788_1390615124700868290_n.jpg"
                       />
                       <source
-                        data-src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/68e94d714ee010ce2010de44_banner-showreel.mp4"
+                        data-src="https://ik.imagekit.io/ihhlj9kpd/580571850_947569991030788_1390615124700868290_n.jpg"
                         type="video/mp4"
-                        src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/68e94d714ee010ce2010de44_banner-showreel.mp4"
+                        src="https://ik.imagekit.io/ihhlj9kpd/580571850_947569991030788_1390615124700868290_n.jpg"
                       />
                     </video>
                   </figure>
@@ -448,7 +446,7 @@ const Index = () => {
                       type="button"
                       className="home-header_lightbox_button button"
                     >
-                      <div className="button-text">PLAY REEL</div>
+                      <div className="button-text">WATCH INTRO</div>
                       <div
                         style={{
                           transform: "translate3d(0px, 130%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
@@ -483,8 +481,8 @@ const Index = () => {
             <div className="container-large">
               <div className="section_header">
                 <h2 className="section_title heading-style-h1">
-                  Our solutions<span className="br"> </span>are{" "}
-                  <span className="text-style-secondary-font">making $millions</span>
+                  Our connections<span className="br"> </span>are{" "}
+                  <span className="text-style-secondary-font">closing $millions</span>
                 </h2>
               </div>
               <div className="home-project_grid">
@@ -507,7 +505,7 @@ const Index = () => {
                       href="/projects"
                       className="button is-small w-inline-block"
                     >
-                      <div className="button-text">View all work</div>
+                      <div className="button-text">View all deals</div>
                       <div
                         className="button-hover-bg"
                         style={{
@@ -531,7 +529,7 @@ const Index = () => {
               <div className="container-large">
                 <div className="section_header is-center">
                   <h2 className="section_title heading-style-h1 text-color-alternate">
-                    Core <span className="text-style-secondary-font">Services</span>
+                    Core <span className="text-style-secondary-font">Solutions</span>
                   </h2>
                 </div>
                 <div className="core-service_grid">
@@ -566,7 +564,7 @@ const Index = () => {
               <div className="container-large">
                 <div className="section_header is-center">
                   <h2 className="section_title heading-style-h1 text-color-alternate">
-                    Loved by <span className="text-style-secondary-font">Hundreds</span>
+                    Trusted by <span className="text-style-secondary-font">Industry Leaders</span>
                   </h2>
                 </div>
                 <div className="testimonail_grid">
@@ -644,7 +642,7 @@ const Index = () => {
             <div className="container-large">
               <div className="section_header is-center">
                 <h2 className="section_title heading-style-h1">
-                  <span className="text-style-secondary-font">Book a free</span> Call{" "}
+                  <span className="text-style-secondary-font">Schedule a strategic</span> Session{" "}
                 </h2>
               </div>
               <div className="booking-embed">

@@ -1,91 +1,90 @@
 import React from 'react';
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
 
 // ==========================================
 // DATA CONFIGURATIONS
 // ==========================================
 
-// Client Logos Data
-const CLIENT_LOGOS = [
+// Partner/Client Logos Data
+const PARTNER_LOGOS = [
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67adab7f109ea0ce63c3ff5f_nas-house.svg',
-        alt: '',
+        alt: 'Healthcare Partner',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b429026535397fbda12509_mymenu-logo.svg',
-        alt: 'My Menu logo',
+        alt: 'Government Partner',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4291146efe5712ec684cf_nasdaily-logo.svg',
-        alt: 'Nasdaily logo',
+        alt: 'Ministry Partner',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4295646efe5712ec6b3e8_existack.png',
-        alt: 'Exitstack Logo',
+        alt: 'Enterprise Partner',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4296a18fbfc438e57163f_nastravel-logo.svg',
-        alt: 'Nastravel Logo',
+        alt: 'Healthcare System',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42978d5f25f6f99420436_reviewxpo-logo.svg',
-        alt: 'Reviewxpo logo',
+        alt: 'Medical Institution',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42988a54127b5b18d2668_nassummit-log.svg',
-        alt: 'nassummit logo',
+        alt: 'Regional Partner',
     },
 ];
 
 // FAQ Data
 const FAQ_ITEMS = [
     {
-        question: 'What makes Omotive stand out?',
+        question: 'What makes Wasel EBDS different from other market entry consultants?',
         answer:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            'We function as a dedicated regional execution partner, not passive advisors. Our risk-sharing model means we only succeed when you do - we absorb upfront costs and charge a success fee only after confirmed ministerial introductions. Unlike typical consultants who charge per-meeting fees, we cover all follow-ups, negotiations, and operational expenses.',
     },
     {
-        question: 'How long will it take to complete my design project?',
+        question: 'How quickly can you arrange ministerial-level meetings?',
         answer:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            'Our direct relationships with C-suite executives and ministry-level decision-makers enable rapid access. Typically, we can arrange high-level government meetings within 2-4 weeks of engagement, depending on the target country and specific objectives. Our proven track record demonstrates consistent delivery of strategic access.',
     },
     {
-        question: 'What is your web design process?',
+        question: 'What is your phased expansion process?',
         answer:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            'We follow a three-phase approach: Foundation & Market Anchoring (identifying anchor partners and establishing government relationships), Strategic Pilots (launching institution-scale programs with clear expansion pathways), and Scale & Institutionalization (expanding within healthcare groups and integrating into national programs). This systematic approach ensures sustainable market penetration.',
     },
     {
-        question: 'How long will it take to complete my design project?',
+        question: 'Which MENA countries do you cover?',
         answer:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            'We have established networks across key MENA healthcare markets including UAE, Saudi Arabia, Egypt, Kuwait, Qatar, and Jordan. Our team conducts comprehensive market mapping and stakeholder analysis to identify the priority countries best aligned with your strategic objectives and product offerings.',
     },
     {
-        question: 'What are your main focus areas in designing?',
+        question: 'What types of companies do you work with?',
         answer:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            'We specialize in partnering with healthcare technology companies, medical device manufacturers, pharmaceutical firms, and clinical AI platforms seeking institutional-scale adoption across MENA markets. Our focus is on companies ready for government partnerships and enterprise healthcare system deployments rather than fragmented, clinic-by-clinic expansion.',
     },
     {
-        question: 'How much will my web design project cost?',
+        question: 'What does your commercial structure look like?',
         answer:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+            'We operate on a success-based model with a $10,000 ministerial-level success fee (payable only after confirmed governmental introductions) and 30-35% revenue share for large private hospital chains and government programs. All commercial terms are flexible and can be calibrated based on market scope, deployment scale, timeline, and strategic partnership depth.',
     },
 ];
 
-// Articles Data
-const ARTICLES = [
+// Case Studies / Articles Data
+const CASE_STUDIES = [
     {
-        url: 'https://uxplanet.org/a-usability-test-of-bangladesh-railway-ticket-booking-56450ec3f03a',
+        url: '#',
         image:
-            'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b09bbb563981b63fd2830e_article-image-1.jpg',
-        title: 'A Usability test of Bangladesh Railway Ticket Booking',
-        tags: ['Product', 'Product'],
+            'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b5b3236858ebec79732441_service-slider-2-high.jpg',
+        title: 'Securing Ministry Access for Healthcare AI Platform in UAE',
+        tags: ['Government Relations', 'Healthcare'],
     },
     {
-        url: 'https://medium.muz.li/branding-case-study-designops-agency-7fd8d4083748',
+        url: '#',
         image:
-            'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b0b70eac26ee049c7a1d6d_article-image-2-high.jpg',
-        title: 'Branding Case-Study Design- Ops Agency',
-        tags: ['Product', 'Product'],
+            'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67d94e5671cd299e19a24dae_service-slider-3-high.jpg',
+        title: 'Strategic Partnership: National Hospital Network Entry',
+        tags: ['Market Entry', 'Partnerships'],
     },
 ];
 
@@ -93,8 +92,8 @@ const ARTICLES = [
 // REUSABLE COMPONENTS
 // ==========================================
 
-// Client Logo Component
-const ClientLogo = ({ src, alt }: { src: string; alt: string }) => (
+// Partner Logo Component
+const PartnerLogo = ({ src, alt }: { src: string; alt: string }) => (
     <div className="client-logo_wrap">
         <img src={src} loading="lazy" alt={alt} />
     </div>
@@ -146,16 +145,16 @@ const FaqCard = ({ question, answer }: { question: string; answer: string }) => 
     </div>
 );
 
-// Article Tag Component
-const ArticleTag = ({ tag }: { tag: string }) => (
+// Case Study Tag Component
+const CaseStudyTag = ({ tag }: { tag: string }) => (
     <div className="article_tag display-flex is-left">
         <div className="article_tag-dot" />
         <div>{tag}</div>
     </div>
 );
 
-// Article Card Component
-const ArticleCard = ({
+// Case Study Card Component
+const CaseStudyCard = ({
     url,
     image,
     title,
@@ -169,13 +168,12 @@ const ArticleCard = ({
     <div className="articles_single-item">
         <a
             href={url}
-            target="_blank"
             className="article_figure w-inline-block position-relative overflow-hidden"
         >
             <img
                 className="cover-image"
                 src={image}
-                alt="article post mockup"
+                alt={title}
                 width={614}
                 height={459}
                 loading="lazy"
@@ -186,10 +184,10 @@ const ArticleCard = ({
         <div className="article_content">
             <div className="article_tag-wrapper display-flex">
                 {tags.map((tag, index) => (
-                    <ArticleTag key={index} tag={tag} />
+                    <CaseStudyTag key={index} tag={tag} />
                 ))}
             </div>
-            <a href={url} target="_blank" className="w-inline-block">
+            <a href={url} className="w-inline-block">
                 <h3 className="article_title heading-style-h2">{title}</h3>
             </a>
         </div>
@@ -201,9 +199,6 @@ const ArticleCard = ({
 // ==========================================
 
 const BookACall = () => {
-    // Initialize Webflow scripts and animations
-    useWebflowScripts();
-
     return (
         <div className="page-wrapper">
             <main className="main-wrapper">
@@ -214,12 +209,11 @@ const BookACall = () => {
                             <div className="book-a-call_header_content display-flex">
                                 <h1 className="book-a-call_header_title">
                                     Let's{' '}
-                                    <span className="text-style-secondary-font">Start Redefining</span>{' '}
-                                    What's Possible, our team is ready to help you
+                                    <span className="text-style-secondary-font">Unlock Your</span>{' '}
+                                    MENA Market Entry, our team is ready to accelerate your expansion
                                 </h1>
                                 <p className="book-a-call_header_text text-size-large">
-                                    With over 100 successful collaborations, we're ready to turn your
-                                    vision into a story of impact and innovation.
+                                    With proven ministerial access and successful institutional partnerships across MENA healthcare systems, we're ready to transform your regional expansion strategy into reality.
                                 </p>
                             </div>
                             <div className="booking-embed">
@@ -245,11 +239,11 @@ const BookACall = () => {
                                         >
                                             <iframe
                                                 className="cal-embed"
-                                                name="cal-embed=30min"
-                                                title="Book a call"
-                                                data-cal-link="mufidul-tapadar-nwmykh/30min"
+                                                name="cal-embed=consultation"
+                                                title="Book a consultation"
+                                                data-cal-link="wasel-ebds/consultation"
                                                 allow="payment"
-                                                src="https://app.cal.com/mufidul-tapadar-nwmykh/30min/embed?embed=30min&layout=month_view&embedType=inline"
+                                                src="https://app.cal.com/wasel-ebds/consultation/embed?embed=consultation&layout=month_view&embedType=inline"
                                                 style={{ height: 574, width: '100%' }}
                                             />
                                         </div>
@@ -274,13 +268,13 @@ const BookACall = () => {
                     </div>
                 </section>
 
-                {/* Client Logos Section */}
+                {/* Partner Logos Section */}
                 <section className="section_client-logos padding-top padding-custom3">
                     <div className="padding-global">
                         <div className="container-large">
                             <div className="client-logos_component">
-                                {CLIENT_LOGOS.map((logo, index) => (
-                                    <ClientLogo key={index} src={logo.src} alt={logo.alt} />
+                                {PARTNER_LOGOS.map((logo, index) => (
+                                    <PartnerLogo key={index} src={logo.src} alt={logo.alt} />
                                 ))}
                             </div>
                         </div>
@@ -306,23 +300,23 @@ const BookACall = () => {
                     </div>
                 </div>
 
-                {/* Articles Section */}
+                {/* Case Studies Section */}
                 <section className="section_articles">
                     <div className="padding-global padding-section">
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    <span className="text-style-secondary-font">Omotive's</span> Articles
+                                    <span className="text-style-secondary-font">Success</span> Stories
                                 </h2>
                             </div>
                             <div className="articles_grid">
-                                {ARTICLES.map((article, index) => (
-                                    <ArticleCard
+                                {CASE_STUDIES.map((study, index) => (
+                                    <CaseStudyCard
                                         key={index}
-                                        url={article.url}
-                                        image={article.image}
-                                        title={article.title}
-                                        tags={article.tags}
+                                        url={study.url}
+                                        image={study.image}
+                                        title={study.title}
+                                        tags={study.tags}
                                     />
                                 ))}
                             </div>

@@ -8,56 +8,56 @@ const DESIGN_PROCESS_STEPS = [
     {
         number: '001',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bff7f640912009094a64fd_heart-icon.svg',
-        title: "Let's Meet",
-        description: "We want to dig deep, and find out what makes you tick. Your values, expertise and company history are behind everything we do, so let us"
+        title: "Let's Connect",
+        description: "We want to understand your market objectives deeply. Your expansion goals, target regions and strategic priorities drive everything we do, so let us"
     },
     {
         number: '002',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa4bec44a21c544a32d6_tictactoi.svg',
-        title: 'Moodboard Dreaming',
-        description: "We're a collaborative and open-minded team that creates exceptional designs by embracing every voice and idea"
+        title: 'Stakeholder Mapping',
+        description: "We're a strategic and connected team that unlocks market access by leveraging every relationship and opportunity"
     },
     {
         number: '003',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa82bb83378bdacd6b5e_desktop-settings.svg',
-        title: 'Figma UI Design',
-        description: 'Now things start to come together. We start bringing your plan and vision to life and create the website UI in Figma, building the foundations'
+        title: 'Access Strategy',
+        description: 'Now things start to align. We develop your market entry roadmap and create the pathway to key decision-makers, building the foundations'
     },
     {
         number: '004',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffaa5b7cb67f2e43f6136_code.svg',
-        title: 'Webflow Development',
-        description: "Bob the Builder's got nothing on us. Our website development geniuses get to work recreating the site UI in WordPress, Shopify, HubSpot"
+        title: 'Executive Engagement',
+        description: "Our network activation specialists connect you with ministry-level contacts, regulatory authorities, and strategic partners across MENA"
     },
     {
         number: '005',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffb1e3e5f1a358c9f068c_quality.svg',
-        title: 'Quality Assurance',
-        description: "Checkboards ready—we rigorously test every website element to ensure it's bug-free and ready for launch. Smooth sailing ahead!"
+        title: 'Momentum Management',
+        description: "Progress tracking ready—we rigorously manage every engagement touchpoint to ensure momentum and readiness for partnership. Strategic execution ahead!"
     },
     {
         number: '006',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffba93278e50f2580a7d5_grid.svg',
-        title: 'We Have Liftoff!',
-        description: '3...2...1... Liftoff! Your rocket ship is ready to go. We are live to launch and watch the crowds burst with excitement.'
+        title: 'Deal Closure!',
+        description: '3...2...1... Success! Your market entry is secured. We deliver results and watch your regional presence expand with strategic impact.'
     }
 ];
 
 const CORE_VALUES = [
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02cacd9ea0f26bb5ae4da_blueprinnt-icon.svg',
-        title: 'Blueprint',
-        text: "We dive deep into your brand, conducting research and analysis to develop tailored blueprints that set you up for increased recognition within today's market."
+        title: 'Intelligence',
+        text: "We dive deep into your objectives, conducting stakeholder mapping and regulatory analysis to develop tailored strategies that position you for accelerated market penetration."
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6fe961651407268d79fd8_foundation-icon.svg',
-        title: 'Foundation',
-        text: 'Our team brings your brand to life through intuitive websites and engaging mobile apps, innovation to captivate and keep loyal audiences.'
+        title: 'Access',
+        text: 'Our team opens critical doors through direct ministerial introductions and executive connections, delivering relationships that unlock opportunities and overcome barriers.'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b6feaff171efceff6d1921_expansion-icon.svg',
-        title: 'Expansion',
-        text: 'We inspire deeper connection and help you realize lasting measurable results through cross-channel the right message at the right time.'
+        title: 'Execution',
+        text: 'We drive sustainable momentum and help you realize measurable outcomes through continuous follow-up and strategic guidance at the right moment.'
     }
 ];
 
@@ -65,70 +65,70 @@ const EXCELLENCE_ITEMS = [
     {
         number: '001',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c01087aa70a95dc2666593_revision-icon.svg',
-        title: 'Identify  Your Business Challenges',
-        text: "We offer unlimited revisions as standard. So rest assured that be happy with all deliverables!"
+        title: 'Unlimited Follow-Up Support',
+        text: "We offer unlimited follow-up meetings as standard. Rest assured that connections remain active and opportunities stay open!"
     },
     {
         number: '002',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c0200dc5b1446fccbaf4dc_hidden-fees-icon.svg',
         title: 'No Hidden Fees',
-        text: 'Transparent web design services with no hidden fees, delivering clear, upfront pricing for your business'
+        text: 'Transparent business development services with no hidden fees, delivering clear, performance-based pricing for your expansion'
     },
     {
         number: '003',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c02042f98a35e36081b3ca_process-icon.svg',
-        title: 'A Personal Process',
-        text: 'We focus on personalized processes that make your journey smooth, friendly, and enjoyable from start to finish'
+        title: 'A Strategic Process',
+        text: 'We focus on personalized execution frameworks that make your market entry smooth, efficient, and results-driven from start to finish'
     },
     {
         number: '004',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c020b2859565df01fbcb78_sheet-icon.svg',
-        title: 'Efficient Project Management',
-        text: 'With our efficient project management, we ensure a smooth, friendly experienc, delivering results on time and with care'
+        title: 'Efficient Relationship Management',
+        text: 'With our efficient stakeholder coordination, we ensure seamless engagement, delivering access on schedule and with precision'
     },
     {
         number: '005',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c020ebc1250a94c3f2016c_track-icon.svg',
         title: 'Proven Track Record',
-        text: "With our proven track record, we've built lasting relationships and deliver results you can count on"
+        text: "With our proven track record, we've built lasting partnerships and deliver market access results you can count on"
     }
 ];
 
 const CTA_LIST_ITEMS = [
-    'Stunning, User-Centered Designs',
-    'Optimized for Conversions & Engagement',
-    'Unlimited Revisions & Clear, Transparent Contracts',
-    'Fast, Responsive, and Scalable Websites'
+    'Strategic, Results-Driven Access',
+    'Optimized for Deal Closure & Expansion',
+    'Unlimited Support & Clear, Transparent Agreements',
+    'Fast, Responsive, and Scalable Engagement'
 ];
 
 const OTHER_SERVICES = [
     {
-        href: '/sevices/mobile-application-design',
+        href: '/services/market-entry',
         imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee659183921f02be7b7_other-service-1-low.webp',
         imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg',
-        title: 'Mobile application design',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        title: 'Market Entry Support',
+        description: 'We unlock market access that not only accelerates your growth but also truly connects ...'
     },
     {
-        href: '/sevices/web-application',
+        href: '/services/strategic-partnerships',
         imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c00032441d1178ff95f846_other-service-2-low.webp',
         imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c000326d559e692450982b_other-service-2-high.jpg',
-        title: 'Web Application',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        title: 'Strategic Partnerships',
+        description: 'We facilitate partnerships that not only drive your expansion but also truly connect ...'
     },
     {
-        href: '/service-two',
+        href: '/services/deal-facilitation',
         imageLow: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee659183921f02be7b7_other-service-1-low.webp',
         imageHigh: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg',
-        title: 'Webflow Developement',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        title: 'Deal Facilitation',
+        description: 'We close strategic deals that not only unlock your potential but also truly connect ...'
     }
 ];
 
 const WORK_PROCESS_FEATURES = [
-    'Pixel Perfect',
-    'Custom Design With Figma',
-    'Ultra-Fast Expedited Service Available'
+    'Ministerial Access',
+    'Custom Strategy With Market Intelligence',
+    'Ultra-Fast Expedited Engagement Available'
 ];
 
 // ============================================================
@@ -184,7 +184,7 @@ const OtherServiceCard = ({ href, imageLow, imageHigh, title, description }) => 
                 className="cover-image"
                 src={imageLow}
                 data-lazy-src={imageHigh}
-                alt="Mobile application service"
+                alt="Strategic service"
                 width={414}
                 height={259}
                 loading="lazy"
@@ -264,17 +264,17 @@ const ServiceOne = () => {
                                 <div className="header_content">
                                     <h1 className="home-header_title">
                                         <div className="display-inline text-style-secondary-font">
-                                            Web design and branding{" "}
+                                            Government relations and market access{" "}
                                         </div>
                                         <div className="br hide-mobile-portrait" />
                                         <div className="display-inline">
-                                            &nbsp;powered to fuel your growth
+                                            &nbsp;powered to accelerate your expansion
                                         </div>
                                     </h1>
                                     <div className="home-header_content-inner display-vertical is-left">
                                         <p className="service_header-text text-size-large">
-                                            Web design and branding powered to fuel your growth goals with
-                                            user-centric and high-impact solutions
+                                            Government relations and strategic access powered to unlock your expansion goals with
+                                            execution-focused and high-impact solutions
                                         </p>
                                     </div>
                                 </div>
@@ -283,7 +283,7 @@ const ServiceOne = () => {
                                         <img
                                             className="cover-image"
                                             src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bede953b2a09cfc2af8fe2_reviewxpo-service-mockup-high.jpg"
-                                            alt="Reviewxpo website mockup"
+                                            alt="Strategic partnership success"
                                             width={874}
                                             height={585}
                                             loading="eager"
@@ -306,23 +306,23 @@ const ServiceOne = () => {
                                                 </g>
                                             </svg>
                                             <p>
-                                                Omotive design agency took the time to understand my
-                                                industry. They knew what our visitors wanted, and they did
-                                                an exceptional job to meet those needs. We've seen great
-                                                improvements in impression and conversion after the
-                                                redesign. I vouch for them!
+                                                Wasel took time to understand our industry challenges.
+                                                They knew exactly who we needed to meet and delivered those
+                                                connections flawlessly. We've seen tremendous traction in
+                                                government contracts after their strategic intervention. I
+                                                vouch for them completely.
                                             </p>
                                         </div>
                                         <div className="service_review_author display-flex is-left">
                                             <img
                                                 src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4211329b6fc32d099d2b1_arifur-rahaman.png"
                                                 loading="lazy"
-                                                alt="arifur rahaman "
+                                                alt="Fatima Hassan"
                                                 className="service_review_auhtor-image"
                                             />
                                             <div className="service_review_author-info">
-                                                <div className="text-color-primary">Arifur Rahaman</div>
-                                                <div>CEO at ReviewXpo</div>
+                                                <div className="text-color-primary">Fatima Hassan</div>
+                                                <div>VP of Strategy, Infrastructure Holdings</div>
                                             </div>
                                         </div>
                                         <div
@@ -338,7 +338,7 @@ const ServiceOne = () => {
                                                 href="/projects"
                                                 className="button is-small w-inline-block"
                                             >
-                                                <div className="button-text">View all project</div>
+                                                <div className="button-text">View all deals</div>
                                                 <div
                                                     className="button-hover-bg"
                                                     style={{
@@ -378,14 +378,14 @@ const ServiceOne = () => {
                                 <div id="w-node-_8b952f68-d200-9754-3e83-c5a593ddf12a-70bb1425" className="work-process_left">
                                     <div className="work-process_content display-vertical">
                                         <h2 className="heading-style-h1 work-process_title">
-                                            We <span className="text-style-secondary-font">create</span>{" "}
-                                            show-stopping{" "}
-                                            <span className="text-style-secondary-font">websites</span>
+                                            We <span className="text-style-secondary-font">unlock</span>{" "}
+                                            game-changing{" "}
+                                            <span className="text-style-secondary-font">market access</span>
                                         </h2>
                                         <p className="work-process_text body-l">
-                                            We design digital platforms that empower users and your
-                                            brand's tribe, creating strategies that drive rapid ROI and
-                                            business growth
+                                            We facilitate strategic connections that empower your expansion and unlock
+                                            regional opportunities, creating pathways that drive rapid ROI and
+                                            sustainable growth
                                         </p>
                                         <ul role="list" className="work-process_list display-vertical">
                                             {WORK_PROCESS_FEATURES.map((feature, index) => (
@@ -396,7 +396,7 @@ const ServiceOne = () => {
                                         </ul>
                                     </div>
                                     <div className="display-flex margin-top margin-custom3">
-                                        <MagnaticButton href="/projects" text="View all project" />
+                                        <MagnaticButton href="/projects" text="View all deals" />
                                     </div>
                                 </div>
                                 <figure
@@ -406,7 +406,7 @@ const ServiceOne = () => {
                                     <img
                                         className="cover-image"
                                         src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bef97e021d2a52a3859858_reviewxpo-showeel-high.jpg"
-                                        alt="reviewxpo showreel mockup"
+                                        alt="strategic engagement success"
                                         width={614}
                                         height={488}
                                         loading="lazy"
@@ -425,8 +425,8 @@ const ServiceOne = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Our web design{" "}
-                                    <span className="text-style-secondary-font">process</span>
+                                    Our market entry{" "}
+                                    <span className="text-style-secondary-font">framework</span>
                                 </h2>
                             </div>
                             <div className="design-process_grid">
@@ -445,7 +445,7 @@ const ServiceOne = () => {
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
                                     How we're{" "}
-                                    <span className="text-style-secondary-font">unique</span>
+                                    <span className="text-style-secondary-font">different</span>
                                 </h2>
                             </div>
                             <div className="core-value_gird">
@@ -464,7 +464,7 @@ const ServiceOne = () => {
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1 text-color-alternate">
                                     Why We{" "}
-                                    <span className="text-style-secondary-font">Stand Out</span>
+                                    <span className="text-style-secondary-font">Deliver Results</span>
                                 </h2>
                             </div>
                             {EXCELLENCE_ITEMS.map((item, index) => (
@@ -500,14 +500,13 @@ const ServiceOne = () => {
                                     <div className="work-process_content display-vertical">
                                         <h2 className="heading-style-h1">
                                             We're a{" "}
-                                            <span className="text-style-secondary-font">top rated</span>{" "}
-                                            web <span className="text-style-secondary-font">design</span>
-                                            agency
+                                            <span className="text-style-secondary-font">trusted partner</span>{" "}
+                                            for <span className="text-style-secondary-font">market access</span>
                                         </h2>
                                         <p className="work-process_text body-l">
-                                            Our website design &amp; development clients consistently rate
-                                            us exceptionally well across the internet- our work has even
-                                            won us awards!
+                                            Our government relations &amp; business development clients consistently rate
+                                            us exceptionally well across the region—our strategic impact has even
+                                            unlocked awards!
                                         </p>
                                         <div role="list" className="cta_list display-vertical">
                                             {CTA_LIST_ITEMS.map((item, index) => (
@@ -518,7 +517,7 @@ const ServiceOne = () => {
                                         </div>
                                     </div>
                                     <div className="display-flex margin-top margin-custom3">
-                                        <MagnaticButton href="/book-a-call" text="Book a free call" />
+                                        <MagnaticButton href="/book-a-call" text="Book a strategy call" />
                                     </div>
                                 </div>
                                 <figure
@@ -529,7 +528,7 @@ const ServiceOne = () => {
                                         className="cover-image"
                                         src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c00447170174072cbadcdf_cta-low.webp"
                                         data-lazy-src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c0044a3edafe371b946e46_cta-high.jpg"
-                                        alt="reviewxpo showreel mockup"
+                                        alt="strategic partnership success"
                                         width={614}
                                         height={488}
                                         loading="lazy"
@@ -548,7 +547,7 @@ const ServiceOne = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Other <span className="text-style-secondary-font">services</span>
+                                    Other <span className="text-style-secondary-font">solutions</span>
                                 </h2>
                             </div>
                             <div className="other-services_grid">

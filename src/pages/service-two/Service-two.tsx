@@ -6,34 +6,34 @@ import React from 'react';
 
 const HEADER_PROJECTS = [
     {
-        href: '/projects/nashouse',
+        href: '/projects/altris-ai',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4cd215468e2baaaf8dea_nas-house-work-high.jpg',
-        alt: 'nashouse website mockup',
-        companyName: 'Nashouse',
+        alt: 'altris ai market entry',
+        companyName: 'Altris AI',
         dataWId: null,
         magneticTransform: 'translate3d(0.0002rem, 0.00012rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)'
     },
     {
-        href: '/projects/reviewxpo',
+        href: '/projects/fintech-licensing',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4e664f95d500738d7095_reviewxpo-work-high.jpg',
-        alt: 'reviewxpo website mockup',
-        companyName: 'Reviewxpo',
+        alt: 'fintech regulatory approval',
+        companyName: 'FinTech Solutions',
         dataWId: null,
         magneticTransform: 'translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)'
     },
     {
-        href: '/projects/nastravel',
+        href: '/projects/manufacturing-deal',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4e22a224221439807852_nas-travel-wok-high.jpg',
-        alt: 'nastravel website mockup',
-        companyName: 'Nastravels',
+        alt: 'manufacturing partnership',
+        companyName: 'Industrial Corp',
         dataWId: '7bf67379-0a92-4766-1bb2-1a0b506e9e06',
         magneticTransform: 'translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)'
     },
     {
-        href: '/projects/dontdiesummit',
+        href: '/projects/energy-partnership',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4f10432130b7246ae876_dd-sumit-work-high.jpg',
-        alt: "don't die summit website mockup",
-        companyName: 'dont die summit',
+        alt: 'energy sector deal',
+        companyName: 'Energy Ventures',
         dataWId: '7bf67379-0a92-4766-1bb2-1a0b506e9e2d',
         magneticTransform: 'translate3d(0rem, 0rem, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)'
     }
@@ -43,127 +43,127 @@ const DESIGN_PROCESS_STEPS = [
     {
         number: '001',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bff7f640912009094a64fd_heart-icon.svg',
-        title: 'Submit Design',
-        description: "We'll examine your design thoroughly and devise a plan for building it on Webflow."
+        title: 'Submit Objectives',
+        description: "We'll examine your expansion goals thoroughly and devise a strategic plan for unlocking market access."
     },
     {
         number: '002',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa4bec44a21c544a32d6_tictactoi.svg',
-        title: 'Begin Working',
-        description: 'Once the design is finalised, our team will commence work promptly to ensure on-time website delivery.'
+        title: 'Begin Engagement',
+        description: 'Once the strategy is finalized, our team will commence outreach promptly to ensure on-time deal execution.'
     },
     {
         number: '003',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffa82bb83378bdacd6b5e_desktop-settings.svg',
-        title: 'Unlimited Revisions.',
-        description: 'We value your feedback. We collect feedback , Improve design unless your satisfaction'
+        title: 'Unlimited Follow-Up',
+        description: 'We value your objectives. We collect feedback, refine approach unless deal closure satisfaction'
     },
     {
         number: '004',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffaa5b7cb67f2e43f6136_code.svg',
-        title: 'Training & Onboarding',
-        description: 'Effortless Webflow Transfer & Expert Training for Your Team on Editor, CMS, and Designer'
+        title: 'Stakeholder Onboarding',
+        description: 'Effortless Relationship Transfer & Expert Training for Your Team on Engagement, Follow-Up, and Execution'
     },
     {
         number: '005',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffb1e3e5f1a358c9f068c_quality.svg',
-        title: 'Go Live',
-        description: "With all systems in place, we'll take care of your hosting and domain on Webflow, and quickly publish your site for you!"
+        title: 'Deal Closure',
+        description: "With all stakeholders aligned, we'll manage final negotiations and documentation, quickly closing your partnership!"
     },
     {
         number: '006',
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffba93278e50f2580a7d5_grid.svg',
         title: 'Stay Connected',
-        description: 'Always On Slack, lark, notion to get Instant Support for Questions, Assistance & Bugs fixes'
+        description: 'Always On WhatsApp, Email, Teams to get Instant Support for Follow-Ups, Assistance & Relationship Management'
     }
 ];
 
 const SUPPORT_SERVICES = [
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c14cf45a3dd5cefd23b615_chrome-extention.svg',
-        title: 'Chrome Extension',
-        text: 'We give you a free personalised Chrome Extension that allows you to create new pages and section to your website with ease!'
+        title: 'Network Intelligence',
+        text: 'We give you personalized market intelligence that allows you to identify new opportunities and expand your regional presence with ease!'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c14d54384b43d05cd94683_webflow-icon.svg',
-        title: 'Webflow Maintenance',
-        text: 'Our pay-as-you, no-BS Webflow maintenance packages are perfect if you need a team of Experts always to be there when you need them.'
+        title: 'Relationship Management',
+        text: 'Our retainer-based relationship management packages are perfect if you need strategic access experts always ready when opportunities arise.'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c14d6b5a3dd5cefd2450e7_handover-icon.svg',
-        title: 'Handover Training',
-        text: 'We train you and your team on how to use the Webflow CMS and Editor to easily add content to your new website.'
+        title: 'Stakeholder Training',
+        text: 'We train you and your team on how to navigate government relations and maintain strategic partnerships effectively.'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c14d6b5a3dd5cefd2450e7_handover-icon.svg',
         title: 'Documentation',
-        text: 'We provide a Notion document with everything you need to know about Webflow and other resources.'
+        text: 'We provide comprehensive documentation with everything you need to know about regional market dynamics and execution protocols.'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c14cf45a3dd5cefd23b615_chrome-extention.svg',
-        title: 'Team Training',
-        text: 'We can provide training for your in-house designers or marketing team on how to utilize effectively. We cover the fundamental aspects.'
+        title: 'Team Enablement',
+        text: 'We can provide training for your in-house business development or regional teams on how to leverage relationships effectively.'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c14d54384b43d05cd94683_webflow-icon.svg',
-        title: 'Slack Connect',
-        text: 'We are always connected via Slack/Teams. If you have questions, need help or discovered a bug, we are always available to help.'
+        title: 'Direct Access',
+        text: 'We are always connected via WhatsApp/Email. If you need introductions, strategic guidance or deal support, we are always available.'
     }
 ];
 
 const INTEGRATION_ITEMS = [
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c19ff5f96269c0d438d392_airtable-svgrepo-com%201.svg',
-        name: 'Airtable'
+        name: 'Egypt Ministry'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c1a15402f106531ebdbc4e_hubspot-svgrepo-com%201.svg',
-        name: 'Memberstack'
+        name: 'UAE Authorities'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c1a17635c9ff40f40f68e5_notion-svgrepo-com%201.svg',
-        name: 'Notion'
+        name: 'Saudi Arabia'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c1a15402f106531ebdbc4e_hubspot-svgrepo-com%201.svg',
-        name: 'Hubspot'
+        name: 'Qatar Networks'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c1a1b6bd4613cd77c33722_webflow-icon%20(1)%201.svg',
-        name: 'WebFlow'
+        name: 'Jordan Access'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c1a1d5c7059a51dd85e9e6_fathom-svgrepo-com%201.svg',
-        name: 'Fathom'
+        name: 'Morocco Links'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c1a1f5c7059a51dd860ac9_google-sheets-icon%201.svg',
-        name: 'Google Sheets'
+        name: 'Kuwait Partners'
     },
     {
         icon: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c1a1b6bd4613cd77c33722_webflow-icon%20(1)%201.svg',
-        name: 'WebFlow'
+        name: 'Oman Channels'
     }
 ];
 
 const OTHER_SERVICES = [
     {
-        href: '/sevices/mobile-application-design',
+        href: '/services/government-relations',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg',
-        title: 'Mobile application design',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        title: 'Government Relations',
+        description: 'We unlock ministerial access that not only accelerates your expansion but also truly connects ...'
     },
     {
-        href: '/sevices/web-application',
+        href: '/services/market-entry',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c000326d559e692450982b_other-service-2-high.jpg',
-        title: 'Web Application',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        title: 'Market Entry Support',
+        description: 'We facilitate market access that not only drives your growth but also truly connects ...'
     },
     {
-        href: '/sevices/website-design-branding',
+        href: '/services/strategic-partnerships',
         image: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bffee74b5b818456b278c2_other-service-1-high.jpg',
-        title: 'Website desing and branding',
-        description: 'We create mobile apps that not only fuel your growth but also truly connect ...'
+        title: 'Strategic Partnerships',
+        description: 'We create partnerships that not only unlock opportunities but also truly connect ...'
     }
 ];
 
@@ -201,9 +201,9 @@ const ProjectItem = ({ href, image, alt, companyName, dataWId, magneticTransform
         </a>
         <div className="project_content">
             <h2 className="heading-style-h2">
-                <div className="display-inline">Omotive helped </div>
+                <div className="display-inline">Wasel unlocked </div>
                 <div className="display-inline text-style-secondary-font">{companyName} </div>
-                <div className="display-inline">to redesign their&nbsp;&nbsp;full website</div>
+                <div className="display-inline">strategic access to&nbsp;&nbsp;MENA markets</div>
             </h2>
             <div
                 className="is-magnatic"
@@ -269,7 +269,7 @@ const OtherServiceCard = ({ href, image, title, description }) => (
             <img
                 className="cover-image"
                 src={image}
-                alt="Mobile application service"
+                alt="Strategic service"
                 width={414}
                 height={259}
                 loading="lazy"
@@ -312,17 +312,17 @@ const ServiceTwo = () => {
                             <div className="header_component">
                                 <div className="header_content">
                                     <h1 className="home-header_title">
-                                        <div className="display-inline">Turning Your Ideas into </div>
+                                        <div className="display-inline">Turning Your Objectives into </div>
                                         <div className="br hide-mobile-portrait" />
                                         <div className="display-inline">
-                                            Web <span className="text-style-secondary-font">Experiences</span>
+                                            Strategic <span className="text-style-secondary-font">Outcomes</span>
                                         </div>
                                     </h1>
                                     <div className="home-header_content-inner display-vertical is-left">
                                         <p className="service_header-text text-size-large">
-                                            We create mobile apps that not only fuel your growth but also
-                                            truly connect with your users, delivering solutions that make
-                                            an impact
+                                            We facilitate deal closures that not only accelerate your expansion but also
+                                            truly unlock regional markets, delivering partnerships that make
+                                            strategic impact
                                         </p>
                                     </div>
                                 </div>
@@ -346,7 +346,7 @@ const ServiceTwo = () => {
                                                 href="/projects"
                                                 className="button is-small w-inline-block"
                                             >
-                                                <div className="button-text">View all project</div>
+                                                <div className="button-text">View all deals</div>
                                                 <div
                                                     className="button-hover-bg"
                                                     style={{
@@ -369,14 +369,14 @@ const ServiceTwo = () => {
                         <div className="container-large">
                             <div className="section_header is-flex">
                                 <h2 className="section_title heading-style-h1">
-                                    Our <span className="text-style-secondary-font">web Developing </span>
+                                    Our <span className="text-style-secondary-font">Deal Facilitation </span>
                                     <span className="br hide-mobile-portrait"> </span>process
                                 </h2>
                                 <p className="section-text is-service body-l">
-                                    Our expert Webflow team brings your designs to life with precision
-                                    and best practices, ensuring a seamless, high-quality build. With
-                                    our proven processes, we create clean, functional sites you'll be
-                                    proud to showcase
+                                    Our expert business development team brings your expansion objectives to reality with precision
+                                    and strategic execution, ensuring seamless, high-quality closure. With
+                                    our proven frameworks, we create lasting, impactful partnerships you'll be
+                                    proud to leverage
                                 </p>
                             </div>
                             <div className="design-process_grid">
@@ -394,7 +394,7 @@ const ServiceTwo = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1 text-color-alternate">
-                                    <span className="text-style-secondary-font">Post delivery</span> support. We
+                                    <span className="text-style-secondary-font">Post closure</span> support. We
                                     <span className="br hide-mobile-portrait"> </span>are always here.
                                 </h2>
                             </div>
@@ -429,13 +429,13 @@ const ServiceTwo = () => {
                         <div className="container-large">
                             <div className="section_header is-flex">
                                 <h2 className="section_title heading-style-h1">
-                                    <span className="text-style-secondary-font">Integrations?</span> We've
+                                    <span className="text-style-secondary-font">Regional Access?</span> We've
                                     <span className="br hide-tablet"> </span>Got You Covered.
                                 </h2>
                                 <p className="section-text is-service body-l">
-                                    Connect Webflow to third-party tools and unlock your website's
-                                    full potential. From CRMs and databases to membership systems, we
-                                    integrate nearly any software with Webflow.
+                                    Connect with decision-makers across MENA and unlock your expansion's
+                                    full potential. From ministries and regulatory bodies to enterprise networks, we
+                                    facilitate access to nearly any stakeholder across the region.
                                 </p>
                             </div>
                             <div className="display-vertical is-center">
@@ -443,9 +443,9 @@ const ServiceTwo = () => {
                                     <img
                                         src="https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67c2b121db46676dd35c3120_webflow-icon-2.svg"
                                         loading="lazy"
-                                        alt="Webflow official logo"
+                                        alt="Wasel network"
                                     />
-                                    <div className="heading-style-h3">Webflow</div>
+                                    <div className="heading-style-h3">Wasel Network</div>
                                 </div>
                                 <div className="integration-divider" />
                             </div>
@@ -529,7 +529,7 @@ const ServiceTwo = () => {
                         <div className="container-large">
                             <div className="section_header is-center">
                                 <h2 className="section_title heading-style-h1">
-                                    Other <span className="text-style-secondary-font">services</span>
+                                    Other <span className="text-style-secondary-font">solutions</span>
                                 </h2>
                             </div>
                             <div className="other-services_grid">

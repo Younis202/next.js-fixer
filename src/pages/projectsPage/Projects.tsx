@@ -1,5 +1,4 @@
 import React from 'react';
-import { useWebflowScripts } from '@/hooks/useWebflowScripts';
 
 // ==========================================
 // DATA CONFIGURATIONS
@@ -13,78 +12,78 @@ const CLIENT_LOGOS = [
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b429026535397fbda12509_mymenu-logo.svg',
-        alt: 'My Menu logo',
+        alt: 'Altris AI logo',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4291146efe5712ec684cf_nasdaily-logo.svg',
-        alt: 'Nasdaily logo',
+        alt: 'Ministry of Health logo',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4295646efe5712ec6b3e8_existack.png',
-        alt: 'Exitstack Logo',
+        alt: 'Investment Authority Logo',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b4296a18fbfc438e57163f_nastravel-logo.svg',
-        alt: 'Nastravel Logo',
+        alt: 'Manufacturing Corp Logo',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42978d5f25f6f99420436_reviewxpo-logo.svg',
-        alt: 'Reviewxpo logo',
+        alt: 'Enterprise Group logo',
     },
     {
         src: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67b42988a54127b5b18d2668_nassummit-log.svg',
-        alt: 'nassummit logo',
+        alt: 'Strategic Holdings logo',
     },
 ];
 
 // Projects Data
 const PROJECTS_GRID_ONE = [
     {
-        href: '/projects/nashouse',
+        href: '/projects/altris-ai-mena',
         imageSrc: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4cd215468e2baaaf8dea_nas-house-work-high.jpg',
-        imageAlt: 'nashouse website mockup',
-        clientName: 'Nashouse',
+        imageAlt: 'altris ai government partnership',
+        clientName: 'Altris AI',
         dataWId: 'b4f3a605-7f72-be37-28f2-25ea57072743',
     },
     {
-        href: '/projects/nassummit',
+        href: '/projects/fintech-licensing',
         imageSrc: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4d1d544503c3feb896e1_nas-summit-work-high.jpg',
-        imageAlt: 'nassummit website mockup',
-        clientName: 'Nassummit',
+        imageAlt: 'fintech regulatory approval',
+        clientName: 'FinTech Solutions',
         dataWId: 'e7a35a53-1750-6700-3378-bd99db11c3f1',
     },
 ];
 
 const PROJECTS_GRID_TWO = [
     {
-        href: '/projects/nastravel',
+        href: '/projects/manufacturing-partnership',
         imageSrc: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4e22a224221439807852_nas-travel-wok-high.jpg',
-        imageAlt: 'nashouse website mockup',
-        clientName: 'Nastravel',
+        imageAlt: 'manufacturing strategic deal',
+        clientName: 'Industrial Corp',
         dataWId: 'f63cc83e-e075-ba82-9101-5143d0a8c700',
     },
     {
-        href: '/projects/reviewxpo',
+        href: '/projects/government-tender',
         imageSrc: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4e664f95d500738d7095_reviewxpo-work-high.jpg',
-        imageAlt: 'nassummit website mockup',
-        clientName: 'Reviewxpo',
+        imageAlt: 'government procurement victory',
+        clientName: 'Tech Innovators',
         dataWId: 'bfdf6af8-e698-9772-40a5-a7f0802ad200',
     },
 ];
 
 const PROJECTS_GRID_THREE = [
     {
-        href: '/projects/nasdaily',
+        href: '/projects/pharma-expansion',
         imageSrc: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4eb5fc2dc5f801235abd_nas-daily-work-high.jpg',
-        imageAlt: 'nashouse website mockup',
-        clientName: 'Nasdaily',
+        imageAlt: 'pharmaceutical market entry',
+        clientName: 'Pharma Group',
         dataWId: 'fa24c397-1f71-8efa-725a-78ea1bc30004',
     },
     {
-        href: '/projects/dontdiesummit',
+        href: '/projects/energy-partnership',
         imageSrc: 'https://cdn.prod.website-files.com/679788a93b745e4c42cbb1c5/67bd4f10432130b7246ae876_dd-sumit-work-high.jpg',
-        imageAlt: 'nassummit website mockup',
-        clientName: "Don't die summit",
+        imageAlt: 'energy sector strategic deal',
+        clientName: 'Energy Ventures',
         dataWId: '0f6e9eb4-48ba-bb05-d214-1e819b417a59',
     },
 ];
@@ -153,12 +152,12 @@ const ProjectCard = ({
         </a>
         <div className="project_content">
             <h3 className="all_project_title heading-style-h2">
-                <div className="display-inline">Omotive helped </div>
+                <div className="display-inline">Wasel unlocked </div>
                 <div className="display-inline text-style-secondary-font">
                     {clientName}{' '}
                 </div>
                 <div className="display-inline">
-                    to redesign their&nbsp;&nbsp;full website
+                    strategic access to&nbsp;&nbsp;MENA markets
                 </div>
             </h3>
             <a
@@ -179,9 +178,6 @@ const ProjectCard = ({
 // ==========================================
 
 const Projects = () => {
-    // Initialize Webflow scripts and animations
-    useWebflowScripts();
-
     return (
         <div className="page-wrapper">
             <main className="main-wrapper">
@@ -192,15 +188,15 @@ const Projects = () => {
                             <div className="header_component">
                                 <div className="header_content">
                                     <h1 className="home-header_title">
-                                        <div className="display-inline">From Unique </div>
+                                        <div className="display-inline">From Strategic </div>
                                         <div className="display-inline text-style-secondary-font">
-                                            Ideas to<span className="br"></span>Big Results
+                                            Access to<span className="br"></span>Deal Closure
                                         </div>
                                     </h1>
                                     <div className="home-header_content-inner display-vertical is-left">
                                         <p className="project-header_text text-size-large">
-                                            omotive is an established brand agency helping B2B companies
-                                            resonate with their customers and stand out as industry
+                                            Wasel is an established business development firm helping international
+                                            companies navigate MENA markets and establish themselves as regional
                                             leaders.
                                         </p>
                                     </div>
